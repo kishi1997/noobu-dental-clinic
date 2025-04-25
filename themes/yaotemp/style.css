@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+Theme Name: YAO-temp
+Theme URI: https://yaotemp.undo.jp
+Author: YAOYA株式会社
+Author URI: https://yaoya.io
+Description: YAOYAテンプレート
+Version: 1.0
+
+-----------------------------------*/
+
+
+/*リセット
+/************************************************************/
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ol,ul,li,dl{list-style-position: inside;}
+ol,ul,li,dl {list-style: none;}
+button,input,select,textarea{margin:0;}
+html{
+	box-sizing:border-box;
+	line-height:1;
+	font-size: 62.5%;
+}
+*,*:before,*:after{box-sizing:inherit;}
+img,embed,iframe,object,audio,video{max-width:100%;}
+iframe{border:0;}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+td,th{
+	padding:0;
+	text-align:left;
+}
+hr{
+	height: 0;
+	border: 0;
+}
