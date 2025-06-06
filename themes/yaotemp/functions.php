@@ -26,7 +26,7 @@ function fit_head() {
 	//GoogleFonts
 	echo '<link rel="preconnect" href="https://fonts.googleapis.com">'."\n";//削除不可
 	echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'."\n";//削除不可
-	echo '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">'."\n";
+	echo '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shippori+Mincho&display=swap&display=swap" rel="stylesheet">'."\n";
 	//Favicon
 	echo '<link rel="icon" href="'.get_template_directory_uri().'/favicon.ico">'."\n";//削除不可
 	
@@ -2494,24 +2494,25 @@ add_action( 'profile_update', 'update_user_group', 10, 2 );
 //投稿ページカテゴリー選択を1つのみに変更 削除不可
 //////////////////////////////////////////////////
 function limit_category_select() {?>
-	<script type="text/javascript">
-	jQuery(function($) {
-		// 投稿画面のカテゴリー選択を制限
-		var categorydiv = $( '#categorydiv input[type=checkbox]' );
-		categorydiv.click( function() {
-			$(this).parents( '#categorydiv' ).find( 'input[type=checkbox]' ).attr('checked', false);
-			$(this).attr( 'checked', true );
-		});
-		// クイック編集のカテゴリー選択を制限
-		var inline_edit_col_center = $( '.inline-edit-col-center input[type=checkbox]' );
-		inline_edit_col_center.click( function() {
-			$(this).parents( '.inline-edit-col-center' ).find( 'input[type=checkbox]' ).attr( 'checked', false );
-			$(this).attr( 'checked', true );
-		});
-		$( '#categorydiv #category-pop > ul > li:first-child, #categorydiv #category-all > ul > li:first-child, .inline-edit-col-center ul.category-checklist > li:first-child' ).before( '<p style="padding-top:5px;">カテゴリーは1つしか選択できません</p>' );
-	});
-	</script>
-  <?php }
+<script type="text/javascript">
+jQuery(function($) {
+    // 投稿画面のカテゴリー選択を制限
+    var categorydiv = $('#categorydiv input[type=checkbox]');
+    categorydiv.click(function() {
+        $(this).parents('#categorydiv').find('input[type=checkbox]').attr('checked', false);
+        $(this).attr('checked', true);
+    });
+    // クイック編集のカテゴリー選択を制限
+    var inline_edit_col_center = $('.inline-edit-col-center input[type=checkbox]');
+    inline_edit_col_center.click(function() {
+        $(this).parents('.inline-edit-col-center').find('input[type=checkbox]').attr('checked', false);
+        $(this).attr('checked', true);
+    });
+    $('#categorydiv #category-pop > ul > li:first-child, #categorydiv #category-all > ul > li:first-child, .inline-edit-col-center ul.category-checklist > li:first-child')
+        .before('<p style="padding-top:5px;">カテゴリーは1つしか選択できません</p>');
+});
+</script>
+<?php }
 add_action( 'admin_print_footer_scripts', 'limit_category_select' );
 
 
@@ -2869,4 +2870,3 @@ function my_mwform_after_send($Data) {
 	}
 }
 add_action('mwform_after_send_mw-wp-form-171', 'my_mwform_after_send');
-
