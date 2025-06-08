@@ -49,8 +49,7 @@
                     </div>
                     <div class="menuNavi-wrapper">
                         <nav class="js-nav menuNavi">
-                            <span class="js-nav-menu menuNavi__link menuNavi__link-current icon-menu"
-                                id="menuNavi__menu"">
+                            <span class="js-nav-menu menuNavi__link menuNavi__link-current" id="menuNavi__menu"">
                     </span>
                 </nav>
                 </div>
@@ -64,109 +63,83 @@
                                         <div class="header-openNav__pcRight__container">
                                             <div class="header-menu__2col header-menu__2col__noChildMenu">
                                                 <ul>
-                                                    <li><a class="font-l" href="<?php echo home_url() ?>">トップページ</a>
+                                                    <li><a href="<?php echo home_url() ?>">トップページ</a>
                                                     </li>
-                                                    <li><a href="<?php bloginfo('url'); ?>/beginner/">初めての方へ</a></li>
-                                                    <li><a href="<?php bloginfo('url'); ?>/reason/">選ばれる理由</a></li>
-                                                    <li><a href="<?php bloginfo('url'); ?>/company/">会社概要</a></li>
-                                                    <li class="u-pc"><a class="font-l u-mt12"
-                                                            href="<?php bloginfo('url'); ?>/company">料金プラン</a>
+                                                    <li><a
+                                                            href="<?php bloginfo('url'); ?>/beginner/">ノブデンタルクリニックについて</a>
                                                     </li>
-                                                    <li class="u-pc">
-                                                        <div class="font-l">ブログ</div>
+                                                    <li>
+                                                        <div>サービス</div>
                                                         <ul class="header-childMenu">
-                                                            <li><a href="<?php bloginfo('url'); ?>/news/">- お知らせ</a>
+                                                            <li><a href="<?php bloginfo('url'); ?>/news/">- インプラント</a>
                                                             </li>
-                                                            <li><a href="<?php bloginfo('url'); ?>/column/">- コラム</a>
+                                                            <li><a href="<?php bloginfo('url'); ?>/column/">- 審美歯科</a>
+                                                            </li>
+                                                            <li><a href="<?php bloginfo('url'); ?>/column/">-
+                                                                    セラミック治療</a>
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li class="font-l u-pc"><a
-                                                            href="<?php bloginfo('url'); ?>/contact/">お問い合わせ</a>
+                                                    <li><a href="<?php bloginfo('url'); ?>/reason/">選ばれる理由</a></li>
+                                                    <li><a href="<?php bloginfo('url'); ?>/company/">あなたにピッタリの治療法は？</a>
+                                                    </li>
+                                                    <li><a href="<?php bloginfo('url'); ?>/company">よくある質問</a>
+                                                    </li>
+                                                    <li><a href="<?php bloginfo('url'); ?>/contact/">治療の流れ</a>
                                                     </li>
                                                 </ul>
                                                 <ul>
-                                                    <li class="font-l">サービスメニュー
+                                                    <li><a href="">治療費用</a>
                                                     </li>
-                                                    <div class="header-menu__2col header-menu__2col__withChildMenu">
-                                                        <ul>
-                                                            <li>
-                                                                <div>屋根工事</div>
-                                                                <ul class="header-childMenu">
-                                                                    <li><a href="<?php bloginfo('url'); ?>/yane-tosou">-
-                                                                            屋根塗装</a>
-                                                                    </li>
-                                                                    <li><a href="<?php bloginfo('url'); ?>/fukikae/">-
-                                                                            葺き替え</a>
-                                                                    </li>
-                                                                    <li><a href="<?php bloginfo('url'); ?>/kasanebuki/">-
-                                                                            重ね葺き</a></li>
-                                                                    <li><a
-                                                                            href="<?php bloginfo('url'); ?>/buki-naoshi/">-
-                                                                            葺き直し</a></li>
-                                                                    <li><a
-                                                                            href="<?php bloginfo('url'); ?>/tsuminaoshi/">-
-                                                                            棟積み直し</a>
-                                                                    </li>
-                                                                    <li><a href="<?php bloginfo('url'); ?>/bankin/">-
-                                                                            棟板金交換</a>
-                                                                    </li>
-                                                                    <li><a href="<?php bloginfo('url'); ?>/shikkui/">-
-                                                                            漆喰補修</a></li>
-                                                                    <li><a href="<?php bloginfo('url'); ?>/yanezai/">-
-                                                                            屋根材補修</a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <ul>
-                                                            <li>
-                                                                <div>外壁工事</div>
-                                                                <ul class="header-childMenu">
-                                                                    <li><a
-                                                                            href="<?php bloginfo('url'); ?>/gaiheki-tosou/">-
-                                                                            外壁塗装</a></li>
-                                                                    <li><a href="<?php bloginfo('url'); ?>/kasanebari/">-
-                                                                            重ね張り</a></li>
-                                                                    <li><a href="<?php bloginfo('url'); ?>/harikae/">-
-                                                                            張り替え</a></li>
-                                                                    <li><a
-                                                                            href="<?php bloginfo('url'); ?>/gaiheki-hoshu/">-
-                                                                            外壁補修</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="u-mt12"><a
-                                                                    href="<?php bloginfo('url'); ?>/amadoi-koukan/">雨樋工事</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </ul>
-                                            </div>
-                                            <div class="header-menu__2col header-menu__2col__alighnRight">
-                                                <ul class="u-sp">
-                                                    <li><a class="font-l"
-                                                            href="<?php bloginfo('url'); ?>/company">料金プラン</a>
+                                                    <li><a href="">採用情報</a>
                                                     </li>
+                                                    <li><a href="">院概要・診療時間・アクセス</a></li>
                                                     <li>
-                                                        <div class="font-l">ブログ</div>
+                                                        <div>ブログ</div>
                                                         <ul class="header-childMenu">
                                                             <li><a href="<?php bloginfo('url'); ?>/news/">- お知らせ</a>
                                                             </li>
                                                             <li><a href="<?php bloginfo('url'); ?>/column/">- コラム</a>
                                                             </li>
+                                                            <li><a href="<?php bloginfo('url'); ?>/column/">-
+                                                                    スタッフブログ</a>
+                                                            </li>
                                                         </ul>
                                                     </li>
-                                                    <li class="font-l"><a
-                                                            href="<?php bloginfo('url'); ?>/contact/">お問い合わせ</a>
+                                                    <li>
+                                                        <div>お問い合わせ</div>
+                                                        <ul class="header-childMenu">
+                                                            <li><a href="<?php bloginfo('url'); ?>/news/">-
+                                                                    お問い合わせフォーム</a>
+                                                            </li>
+                                                            <li><a href="<?php bloginfo('url'); ?>/column/">- LINE相談</a>
+                                                            </li>
+                                                            <li><a href="<?php bloginfo('url'); ?>/column/">-
+                                                                    採用フォーム</a>
+                                                            </li>
+                                                        </ul>
                                                     </li>
+                                                    <div class="phone-block__inner">
+                                                        <div class="menu_contact_phone_icons_text">
+                                                            <p>お電話でのお問い合わせ</p>
+                                                            <p>[毎週日曜日定休]</p>
+                                                        </div>
+                                                        <div class="menu_contact_phone_icons_number">
+                                                            <img src="<?php bloginfo('template_url');?>/img/ico-tel.svg"
+                                                                alt="phone">
+                                                            <div class="menu_contact_phone_number_text_wrapper"><span
+                                                                    class="menu_contact_phone_number_text">011-598-1181</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="openNav-cta">
+                                                            <a href="<?php bloginfo('url'); ?>/contact/">
+                                                                <img src="<?php bloginfo('template_url');?>/img/ico-mail-white.svg"
+                                                                    alt="mail-icon">
+                                                                お問い合わせ
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </ul>
-                                                <div class="openNav-cta">
-                                                    <a href="<?php bloginfo('url'); ?>/contact/">
-                                                        <img src="<?php bloginfo('template_url');?>/img/ico-mail-white.svg"
-                                                            alt="mail-icon">
-                                                        お問い合わせ
-                                                    </a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
