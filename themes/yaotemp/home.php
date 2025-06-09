@@ -15,8 +15,13 @@
             </div>
         </div>
     </div>
-    <div class="mv_caption_container"><span
-            class="mv_caption_text">自信に満ちた笑顔と、<br />毎日の食事を心から楽しむ<br />しっかり噛める力をあなたに。</span></div>
+    <div class="mv_caption_container">
+        <h2 class="mv_caption_text">
+            <span>術後の安心まで考え抜いた、</span>
+            <span>自家骨使用のインプラント治療</span>
+        </h2>
+        <h3>デンサーバー副鼻腔底挙上術だからこその安全性</h3>
+    </div>
     <div class="mv_news_banner">
         <div class="mv_news_banner_label"><span class="mv_news_banner_label_text">お知らせ</span></div>
         <div class="mv_news_banner_content"><span class="mv_news_banner_content_text">2024.12.21　年末年始の営業日時について</span>
@@ -224,7 +229,7 @@ $service_items_data = [
                     </div>
                     <a href="<?php echo esc_url($item['button_link']); ?>" class="c-btn top_service__item_button">
                         <span class="c-btn__text"><?php echo esc_html($item['button_text']); ?></span>
-                        <span class="c-btn__icon" data-svg-wrapper>
+                        <span class="c-btn__icon">
                             <svg width="21" height="8" viewBox="0 0 21 8" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -435,10 +440,98 @@ $top_faq_items = [
         </div>
     </div>
 </section>
-
-<!-- map -->
+<!-- ブログスライダー -->
 <?php
+$top_blog_items = [
+    [
+        'image' => 'top-blog-img1.jpg', // 拡張子は .jpg や .png など実際のファイルに合わせる
+        'category' => ['slug' => 'news', 'name' => 'お知らせ'],
+        'title' => '歯並び改善！裏側矯正のメリットと選び方のポイント',
+        'excerpt' => '装置のせいで磨きにくい口呼吸になりやすいなど、口臭の原因は様々です。',
+        'url' => home_url('/blog/post-1/'), // ダミーURL
+    ],
+    [
+        'image' => 'top-blog-img2.jpg',
+        'category' => ['slug' => 'column', 'name' => 'コラム'],
+        'title' => '矯正中の口臭でお悩みの方へ！効果的なケア方法とは？',
+        'excerpt' => '装置のせいで磨きにくい口呼吸になりやすいなど、口臭の原因は様々です。',
+        'url' => home_url('/blog/post-2/'),
+    ],
+    [
+        'image' => 'top-blog-img3.jpg',
+        'category' => ['slug' => 'column', 'name' => 'コラム'],
+        'title' => 'インビザラインとガミースマイルの関係性・改善策を探る！',
+        'excerpt' => '装置のせいで磨きにくい口呼吸になりやすいなど、口臭の原因は様々です。',
+        'url' => home_url('/blog/post-3/'),
+    ],
+    [
+        'image' => 'top-blog-img4.jpg',
+        'category' => ['slug' => 'news', 'name' => 'お知らせ'],
+        'title' => '歯を抜かない治療！最先端技術で天然歯を守る方法とは',
+        'excerpt' => '装置のせいで磨きにくい口呼吸になりやすいなど、口臭の原因は様々です。',
+        'url' => home_url('/blog/post-4/'),
+    ],
+    [
+        'image' => 'top-blog-img5.jpg',
+        'category' => ['slug' => 'column', 'name' => 'コラム'],
+        'title' => '歯並び改善！裏側矯正のメリットと選び方のポイント紹介',
+        'excerpt' => '装置のせいで磨きにくい口呼吸になりやすいなど、口臭の原因は様々です。',
+        'url' => home_url('/blog/post-5/'),
+    ]
+];
 ?>
+
+<section class="top_blog">
+    <div class="top_sec__ttl">
+        <div class="top_sec__ttl__bg">
+            <span>COLUMN</span>
+        </div>
+        <h3 class="top_sec__ttl__text">コラム</h3>
+    </div>
+    <p class="top_blog__desc">「こんな歯医者があったらいいな」を形にし、<br />
+        怖くない、また行きたくなる歯科医院を目指しています。</p>
+    <div class="top_blog__inner">
+        <?php if (!empty($top_blog_items)) : ?>
+        <div class="top_blog__slider_wrapper">
+            <div class="top_blog__slider">
+                <?php foreach ($top_blog_items as $item) : ?>
+                <div class="top_blog__slide_item">
+                    <a href="<?php echo esc_url($item['url']); ?>" class="top_blog__item_link">
+                        <div class="top_blog__item_image_wrapper">
+                            <img src="<?php echo get_theme_file_uri('/img/' . esc_attr($item['image'])); ?>"
+                                alt="<?php echo esc_attr($item['title']); ?> のアイキャッチ画像" class="top_blog__item_image">
+                            <?php if (!empty($item['category'])) : ?>
+                            <span
+                                class="top_blog__item_category category-<?php echo esc_attr($item['category']['slug']); ?>"><?php echo esc_html($item['category']['name']); ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <div class="top_blog__item_content">
+                            <h3 class="top_blog__item_title"><?php echo esc_html($item['title']); ?></h3>
+                            <p class="top_blog__item_excerpt"><?php echo esc_html($item['excerpt']); ?></p>
+                        </div>
+                    </a>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php else : ?>
+        <p class="top_blog__no_posts">お知らせやコラムはまだありません。</p>
+        <?php endif; ?>
+    </div>
+    <div class="top_blog__button">
+        <a href="<?php echo esc_url($item['button_link']); ?>" class="c-btn c-btn--primary">
+            <span class="c-btn__text">もっと見る</span>
+            <span class="c-btn__icon" data-svg-wrapper>
+                <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.4276 4.35355C20.6229 4.15829 20.6229 3.84171 20.4276 3.64645L17.2456 0.464466C17.0503 0.269204 16.7338 0.269204 16.5385 0.464466C16.3432 0.659728 16.3432 0.976311 16.5385 1.17157L19.3669 4L16.5385 6.82843C16.3432 7.02369 16.3432 7.34027 16.5385 7.53553C16.7338 7.7308 17.0503 7.7308 17.2456 7.53553L20.4276 4.35355ZM0.0740356 4V4.5H20.074V4V3.5H0.0740356V4Z"
+                        fill="<?php echo $primary_color;  ?>" />
+                </svg>
+            </span>
+        </a>
+    </div>
+</section>
+<!-- map -->
 <section class="top_map">
     <div class="l-container">
         <div class="top_map__inner">
@@ -525,48 +618,5 @@ $top_faq_items = [
         </div>
     </div>
 </section>
-
-<div class="main-contents">
-    <p style="padding: 50px; margin: 10px 0; background-color: #ccc;">main-contents: 1200px;</p>
-</div>
-<div class="sub-contents">
-    <p style="padding: 50px; margin: 10px 0; background-color: #eee;">sub-contents: 1000px;</p>
-</div>
-<div class="slim-contents">
-    <p style="padding: 50px; margin: 10px 0; background-color: #ccc;">slim-contents: 768px;</p>
-</div>
-
-<!-- l-wrapper -->
-<div class="l-wrapper">
-
-    <main class="l-main">
-        <p style="margin: 100px 0;">トップページのコンテンツがここに入ります</p>
-
-        <div class="main-contents">
-
-            <!-- 記事一覧 -->
-            <?php include("part-postlist.php"); ?>
-
-            <!-- 施工事例一覧 -->
-            <?php include("part-workslist.php"); ?>
-
-            <!-- イベント一覧 -->
-            <?php include("part-eventslist.php"); ?>
-
-        </div>
-    </main>
-</div>
-<!-- /l-wrapper -->
-
-<script>
-const hamburgerToggle = document.querySelector('.menu_hamburger_toggle');
-const mainNavigation = document.getElementById('main_navigation');
-
-hamburgerToggle.addEventListener('click', () => {
-    const isExpanded = hamburgerToggle.getAttribute('aria-expanded') === 'true' || false;
-    hamburgerToggle.setAttribute('aria-expanded', !isExpanded);
-    mainNavigation.classList.toggle('is_open');
-});
-</script>
 
 <?php get_footer(); ?>

@@ -1,11 +1,10 @@
-//#BTNクリックで#MENUを表示.disp {display: none;}
-$(function () {
-  $(".menuNavi").click(function () {
-    $("#menuNavi__menu").toggleClass("icon-menu");
-    $("#menuNavi__menu").toggleClass("icon-close");
-    $(".mainNavi").toggleClass("menu-open");
-  });
-});
+// //#BTNクリックで#MENUを表示.disp {display: none;}
+// $(function () {
+//   $(".menuNavi").click(function () {
+//     $("#menuNavi__menu").toggleClass("icon-close");
+//     $(".mainNavi").toggleClass("menu-open");
+//   });
+// });
 
 //Scroll Rules
 $(function () {
@@ -62,91 +61,6 @@ $(function () {
   });
 });
 
-// YouTubeモーダルここから
-document.addEventListener("DOMContentLoaded", (event) => {
-  // videoThumbのclass名がつく要素を全取得
-  let imgTags = document.getElementsByClassName("videoThumb");
-  // ループ
-  for (let i = 0; i < imgTags.length; i++) {
-    let videoId = imgTags[i].getAttribute("data-video-id");
-    imgTags[i].src = `https://img.youtube.com/vi/${videoId}/0.jpg`;
-    imgTags[i].addEventListener("click", function () {
-      openModal(videoId);
-    });
-  }
-
-  // モーダルの要素を作成
-  let modal = document.createElement("div");
-  modal.id = "modal";
-  modal.style.display = "none";
-  modal.style.position = "fixed";
-  modal.style.zIndex = "3";
-  modal.style.left = "0";
-  modal.style.top = "0";
-  modal.style.width = "100%";
-  modal.style.height = "100%";
-  modal.style.overflow = "auto";
-  modal.style.backgroundColor = "rgba(0,0,0,0.4)";
-  modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-  // modalContentの要素を作成
-  let modalContent = document.createElement("div");
-  modalContent.className = "modalContent";
-  // iframeのYouTube要素を作成
-  let videoPlayer = document.createElement("iframe");
-  videoPlayer.id = "videoPlayer";
-  videoPlayer.width = "560";
-  videoPlayer.height = "315";
-  videoPlayer.frameBorder = "0";
-  videoPlayer.allow =
-    "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
-  videoPlayer.allowFullscreen = true;
-  // 閉じるボタンを作成
-  let closeBtn = document.createElement("button");
-  closeBtn.className = "closeBtn";
-  closeBtn.addEventListener("click", closeModal);
-
-  modalContent.appendChild(videoPlayer);
-  modalContent.appendChild(closeBtn);
-  modal.appendChild(modalContent);
-  document.body.appendChild(modal);
-});
-// モーダルモーダル関数
-function openModal(videoId) {
-  let modal = document.getElementById("modal");
-  let videoPlayer = document.getElementById("videoPlayer");
-
-  videoPlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  modal.style.display = "block";
-}
-// モーダルを閉じる関数を作成
-function closeModal() {
-  let modalContent = document.querySelector(".modalContent");
-  modalContent.style.animation = "fadeOut 0.7s";
-
-  setTimeout(function () {
-    let modal = document.getElementById("modal");
-    let videoPlayer = document.getElementById("videoPlayer");
-
-    videoPlayer.src = "";
-    modal.style.display = "none";
-    //Reset the animation so it plays on the next open
-    modalContent.style.animation = "fadeIn 0.7s";
-  }, 700);
-}
-
-// YouTubeモーダルここまで
-
-// 画像拡大
-$(function () {
-  $(".gallery").modaal({
-    type: "image",
-  });
-});
-
 //　ヘッダーメニュー
 var $navLists = $(".js-navLists");
 var $navButtonWrapper = $(".js-nav");
@@ -183,13 +97,17 @@ $(window).resize(handleMenu);
 handleMenu();
 
 // headerの高さを計測して、bodyのpading-topにその値を追加
+function adjustBodyPadding() {
+  if (window.innerWidth <= 568) {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    document.body.style.paddingTop = headerHeight + "px";
+  } else {
+    document.body.style.paddingTop = ""; // 568pxを超えた場合はpaddingをリセット
+  }
+}
+
 window.addEventListener("resize", adjustBodyPadding);
 window.addEventListener("load", adjustBodyPadding);
-
-function adjustBodyPadding() {
-  const headerHeight = document.querySelector("header").offsetHeight;
-  document.body.style.paddingTop = headerHeight + "px";
-}
 // アコーディオン
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".top_faq__item");
@@ -249,5 +167,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+  });
+});
+
+jQuery(document).ready(function ($) {
+  $(".top_blog__slider").slick({
+    centerMode: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 2,
+    centerPadding: "100px",
+    dots: true,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1340,
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "100px",
+        },
+      },
+      {
+        breakpoint: 1080, // Medium Desktop
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "80px",
+        },
+      },
+      {
+        breakpoint: 768, // Tablet
+        settings: {
+          slidesToShow: 1, // タブレット以下では中央1枚に戻す (または3枚維持も可)
+          centerPadding: "100px", // slidesToShow:1 の場合の見切れ
+        },
+      },
+      {
+        breakpoint: 568, // Small Tablet / Large Mobile
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "60px",
+        },
+      },
+      {
+        breakpoint: 480, // Mobile
+        settings: {
+          slidesToShow: 1,
+          //   centerMode: false,
+          centerPadding: "30px",
+        },
+      },
+    ],
   });
 });
