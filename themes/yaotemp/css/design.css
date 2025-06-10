@@ -649,14 +649,18 @@ header .header-openNav__container .openNav-cta a img {
 }
 .top .mv-bg {
   position: relative;
+  min-height: 60vh;
 }
 .top .mv-bg picture {
   display: flex;
   height: 100%;
 }
-.top .mv-bg img {
-  width: 100%;
-  height: auto;
+.top .mv-bg picture img {
+  width: unset;
+  min-height: 60vh;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .top .mv_caption_container {
   right: 4.5vw;
@@ -793,9 +797,8 @@ header .header-openNav__container .openNav-cta a img {
 }
 .top .mv .line_cta_banner {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   right: 30px;
-  transform: translate(0%, 50%);
   z-index: 80;
 }
 @media screen and (max-width: 768px) {
@@ -1517,7 +1520,7 @@ header .header-openNav__container .openNav-cta a img {
   }
 }
 .top .top_message__left {
-  width: 40%;
+  width: 45%;
 }
 @media screen and (max-width: 768px) {
   .top .top_message__left {
@@ -1539,13 +1542,8 @@ header .header-openNav__container .openNav-cta a img {
 }
 .top .top_message__left .top_message__text h3 {
   color: #01255A;
-  font-size: 3rem;
+  font-size: clamp(2rem, 2.1vw, 3rem);
   font-weight: bold;
-}
-@media (max-width: 1080px) {
-  .top .top_message__left .top_message__text h3 {
-    font-size: 2.4rem;
-  }
 }
 @media (max-width: 768px) {
   .top .top_message__left .top_message__text h3 {
@@ -1827,10 +1825,15 @@ header .header-openNav__container .openNav-cta a img {
   gap: 3rem;
 }
 .top .top_map__info {
-  flex: 1 1 55%;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+}
+@media screen and (max-width: 880px) {
+  .top .top_map__info {
+    flex: 1 1 55%;
+  }
 }
 .top .top_map__info_header {
   display: flex;
@@ -1926,9 +1929,27 @@ header .header-openNav__container .openNav-cta a img {
   text-align: left;
 }
 .top .top_map__visuals {
-  flex: 1 1 45%;
+  flex: 1 1 55%;
   display: flex;
   gap: 1.5rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 880px) {
+  .top .top_map__visuals {
+    flex: 1 1 45%;
+  }
+}
+.top .top_map__visuals iframe {
+  width: 100%;
+  min-height: 320px;
+}
+.top .top_map__visuals img {
+  width: 30%;
+}
+@media screen and (max-width: 880px) {
+  .top .top_map__visuals img {
+    display: none;
+  }
 }
 .top .top_map__visuals_map_image {
   width: 100%;
