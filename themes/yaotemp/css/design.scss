@@ -2918,3 +2918,418 @@ header {
         display: none !important;
     }
 }
+
+.sample {
+    .sample-feature {
+        margin-top: 80px;
+
+        @include max-screen($breakpoint-sm) {
+            margin-top: 40px;
+        }
+
+        &__content {
+            margin-bottom: 40px;
+
+            &:nth-last-child(1) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__item {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            text-align: left;
+
+            @include max-screen($breakpoint-sm) {
+                flex-direction: column;
+                gap: 40px;
+                width: fit-content;
+                margin-inline: auto;
+            }
+
+            &__alcenter {
+                align-items: center;
+            }
+
+            &__img {
+                width: 50%;
+
+                @include max-screen($breakpoint-sm) {
+                    order: 2;
+                }
+
+                img {
+                    width: 100%;
+
+                    &:nth-child(1) {
+                        padding-left: 40px;
+                    }
+
+                    &:nth-child(2) {
+                        width: 65%;
+                    }
+                }
+
+                @include max-screen($breakpoint-sm) {
+                    width: 100%;
+                }
+            }
+
+            &__text {
+                width: 50%;
+
+                .top-sec__ttl {
+                    margin-bottom: 40px;
+                }
+
+                @include max-screen($breakpoint-sm) {
+                    width: 100%;
+                }
+
+                @include max-screen($breakpoint-sm) {
+                    display: contents;
+                }
+
+                .sample-feature__item__ttl {
+                    font-size: 1.8rem;
+                    margin-bottom: 40px;
+                    position: relative;
+                    color: #000;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;
+
+                    @include max-screen($breakpoint-sm) {
+                        order: 1;
+                    }
+
+                    span {
+                        font-family: $font-mincho;
+                        font-size: clamp(2.8rem, 2.77vw, 4rem);
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -15px;
+                        left: 0;
+                        transform: translate(0%, -50%);
+                        height: 1px;
+                        width: 80px;
+                        background-color: #853434;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    gap: 16px;
+                    flex-direction: column;
+
+                    @include max-screen($breakpoint-sm) {
+                        order: 3;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 1.8;
+                    }
+                }
+
+                .c-cta {
+                    margin-top: 40px;
+                    margin-left: auto;
+
+                    @include max-screen($breakpoint-sm) {
+                        margin-inline: auto;
+                    }
+                }
+            }
+
+            &:nth-last-child(1) {
+                margin-top: 80px;
+            }
+
+        }
+
+        &__text__w100 {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    .sample-point {
+        text-align: center;
+        position: relative;
+        padding: 40px 0;
+
+        .ttl-block {
+            p {
+                font-size: 1.8rem;
+                margin-top: 12px;
+            }
+        }
+
+        .bg-deco-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 22vw;
+            max-width: 320px;
+            transform: translateY(-26%);
+
+            @include max-screen($breakpoint-sm) {
+                width: 156px;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__content {
+            margin-top: 6.1vw;
+
+            @include min-screen($breakpoint-lg) {
+                margin-top: 80px;
+            }
+
+            @include max-screen($breakpoint-sm) {
+                &:not(:first-child) {
+                    margin-top: 60px;
+                }
+            }
+        }
+
+        &__item {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            text-align: left;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 120;
+
+            &:nth-last-child(1) {
+                margin-bottom: 0;
+            }
+
+            @include max-screen($breakpoint-sm) {
+                flex-direction: column;
+                gap: 40px;
+                width: fit-content;
+                margin-inline: auto;
+                margin-bottom: 40px;
+                max-width: 480px;
+            }
+
+            @include max-screen($breakpoint-xs) {
+                gap: 24px;
+            }
+
+            .deco-number {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 14vw;
+                max-width: 211px;
+                z-index: -1;
+                transform: translateY(-15%);
+
+                @include max-screen($breakpoint-sm) {
+                    width: 169px;
+                    right: 0;
+                    left: unset;
+                    bottom: 0;
+                    transform: none;
+                }
+
+                &2 {
+                    right: unset;
+                    left: 0;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            >img {
+                width: 40%;
+
+                @include max-screen($breakpoint-sm) {
+                    width: 100%;
+                    order: 1;
+                    transform: translateX(-4%);
+                }
+            }
+
+            >div {
+                width: 60%;
+                position: relative;
+
+                @include max-screen($breakpoint-sm) {
+                    width: 100%;
+                    order: 2;
+                }
+
+                h3 {
+                    font-size: clamp(2.8rem, 2.22vw, 3.2rem);
+                    margin-bottom: 24px;
+                    position: relative;
+                    color: #000;
+                    position: relative;
+                    display: inline-block;
+                    font-weight: 500;
+                }
+
+                p {
+                    line-height: 1.6;
+                    margin-top: 12px;
+
+                    &:nth-child(1) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        .c-cta {
+            margin-top: 24px;
+            margin-left: auto;
+
+            @include max-screen($breakpoint-xs) {
+                margin-inline: auto;
+            }
+        }
+    }
+
+    .concept-2col {
+        padding-top: 7.8vw;
+        padding-bottom: 12px;
+        overflow: hidden;
+
+        @include min-screen($breakpoint-lg) {
+            padding-top: 80px;
+        }
+
+        @include max-screen($breakpoint-xs) {
+            padding-top: 40px;
+        }
+
+        &__content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5vw;
+            gap: 55px;
+            max-width: 1200px;
+            margin-inline: auto;
+
+            @include min-screen($breakpoint-lg) {
+                margin-top: 80px;
+            }
+
+            @include max-screen($breakpoint-md) {
+                gap: 32px;
+            }
+
+            @include max-screen($breakpoint-sm) {
+                flex-direction: column;
+            }
+
+            @include max-screen($breakpoint-xs) {
+                margin-top: 40px;
+            }
+
+            .concept-2col___item {
+                width: calc(50% - 32px);
+                overflow: hidden;
+
+                @include max-screen($breakpoint-sm) {
+                    width: 100%;
+                    max-width: 480px;
+                    margin-inline: auto;
+                }
+
+                .concept-2col___item__img {
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        transition: all .4s;
+                    }
+                }
+
+                &__info {
+                    margin-top: 20px;
+                    text-align: left;
+
+                    @include max-screen($breakpoint-xs) {
+                        flex: 1;
+                    }
+                }
+
+                &__label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    span:nth-child(1) {
+                        color: #fff;
+                        background-color: #9C8F79;
+                        padding: 2px 16px;
+                        display: inline-block;
+                        font-size: 1.3rem;
+
+                        @include max-screen($breakpoint-xs) {
+                            padding: 2px 7px;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    span:nth-child(2) {
+                        font-size: 1.2rem;
+                        color: #DBB777;
+                    }
+                }
+
+                h3 {
+                    margin-bottom: 14px;
+                    font-size: clamp(1.8rem, 1.66vw, 2.4rem);
+                    font-weight: 500;
+                    background: $background-color-light-gray;
+                    padding: 4px 12px;
+
+                    span {
+                        font-size: clamp(2.4rem, 2.22vw, 3.2rem);
+                        font-weight: bold;
+                        display: inline-block;
+                        margin-right: 4px;
+                        font-family: $font-roboto;
+                        color: $primary-color;
+                    }
+
+                    @include max-screen($breakpoint-xs) {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                    }
+                }
+
+                p {
+                    margin-top: 10px;
+                    text-align: left;
+
+                    @include max-screen($breakpoint-xs) {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+
+        .c-cta {
+            margin-top: 40px;
+            margin-inline: auto;
+        }
+    }
+}
