@@ -762,7 +762,12 @@ header {
 
         &-bg {
             position: relative;
-            min-height: 60vh;
+            height: 90vh;
+            overflow: hidden;
+
+            @include max-screen($breakpoint-slider) {
+                height: 75vh;
+            }
 
             picture {
                 display: flex;
@@ -910,16 +915,16 @@ header {
 
         .line_cta {
             &_banner {
-                position: absolute;
-                bottom: 20px;
+                position: fixed;
+                bottom: 10vh;
                 right: 30px;
-                // transform: translate(0%, 50%);
                 z-index: 80;
+                transform: translateY(50%);
 
-                @include max-screen($breakpoint-sm) {
-                    bottom: 18px;
+                @include max-screen($breakpoint-slider) {
+                    bottom: 25vh;
+                    transform: translateY(50%);
                     right: 15px;
-                    transform: none;
                 }
             }
 
