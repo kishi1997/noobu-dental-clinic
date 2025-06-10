@@ -5,7 +5,7 @@
             <source media="(max-width: 568px)" srcset="<?php bloginfo('template_url');?>/img/top-fv-spBg.jpg">
             <img src="<?php bloginfo('template_url');?>/img/top-fv-bg.jpg" alt="Main Visual Image" />
         </picture>
-        <div class="line_cta_banner">
+        <a href="" class="line_cta_banner">
             <div class="line_cta_background_circle">
                 <div data-svg-wrapper class="line_cta_icon_wrapper">
                     <img src="<?php bloginfo('template_url');?>/img/line-white.svg" alt="line-icon">
@@ -13,7 +13,7 @@
                 <span class="line_cta_text_jp">LINE相談</span>
                 <span class="line_cta_text_en">LINE CONSULTANT</span>
             </div>
-        </div>
+        </a>
     </div>
     <div class="mv_caption_container">
         <h2 class="mv_caption_text">
@@ -24,11 +24,12 @@
     </div>
     <div class="mv_news_banner">
         <div class="mv_news_banner_label"><span class="mv_news_banner_label_text">お知らせ</span></div>
-        <div class="mv_news_banner_content"><span class="mv_news_banner_content_text">2024.12.21　年末年始の営業日時について</span>
+        <a href="" class="mv_news_banner_content"><span
+                class="mv_news_banner_content_text">2024.12.21　年末年始の営業日時について</span>
             <div class="mv_news_banner_arrow">
                 <img src="<?php bloginfo('template_url');?>/img/ico-arrow-right.svg" alt="arrow">
             </div>
-        </div>
+        </a>
     </div>
 </div>
 
@@ -608,11 +609,11 @@ $top_blog_items = [
                     </div>
                 </div>
                 <div class="top_map__visuals">
-                    <picture>
-                        <source media="(max-width:480px)"
-                            srcset="<?php bloginfo('template_url');?>/img/top-map-spImg.jpg">
-                        <img src="<?php bloginfo('template_url');?>/img/top-map-img.jpg" alt="クリニック周辺地図" />
-                    </picture>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.3716081549996!2d141.37220577614434!3d43.03361222113824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2a46e75bb435%3A0x1c879877a0808352!2z5pel5pys44CB44CSMDYyLTA5MzQg5YyX5rW36YGT5pyt5bmM5biC6LGK5bmz5Yy65bmz5bK477yU5p2h77yY5LiB55uu!5e0!3m2!1sja!2sca!4v1749515580247!5m2!1sja!2sca"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <img src="<?php bloginfo('template_url');?>/img/top-map-pcImg.jpg" alt="クリニックイメージ" />
                 </div>
             </div>
         </div>

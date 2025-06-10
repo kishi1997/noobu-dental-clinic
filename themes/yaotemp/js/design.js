@@ -222,3 +222,33 @@ jQuery(document).ready(function ($) {
     ],
   });
 });
+
+const banner = document.querySelector(".line_cta_banner");
+console.log("🚀 ~ banner:", banner);
+const fv = document.querySelector(".mv");
+console.log("🚀 ~ fv:", fv);
+
+// 初期位置を記録
+let initialTop = null;
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // 初回にバナーのブラウザ上での位置を取得
+  if (initialTop === null) {
+    const rect = banner.getBoundingClientRect();
+    initialTop = rect.top;
+  }
+
+  if (scrollY > 0) {
+    // スクロールされたら fixed にして、同じ位置に固定
+    banner.style.position = "fixed";
+    banner.style.top = `${initialTop}px`;
+    banner.style.bottom = "auto";
+  } else {
+    // 最上部では absolute に戻す
+    banner.style.position = "absolute";
+    banner.style.bottom = "20px";
+    banner.style.top = "auto";
+  }
+});

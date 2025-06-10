@@ -18,24 +18,32 @@
         <!--l-header-->
         <header>
             <div class="menu_bar">
-                <div class="menu_logo_wrapper">
-                    <img class="menu_logo_image" src="<?php bloginfo('template_url');?>/img/logo.svg" alt="Site Logo" />
-                </div>
+                <?php if (is_home()) : ?>
+                <h1 class="menu_logo_wrapper">
+                    <img class="menu_logo_image" src="<?php bloginfo('template_url');?>/img/logo.svg"
+                        alt="<?php wp_title(); ?>" />
+                </h1>
+                <?php else : ?>
+                <a href="<?php echo home_url() ?>" class="menu_logo_wrapper">
+                    <img class="menu_logo_image" src="<?php bloginfo('template_url');?>/img/logo.svg"
+                        alt="<?php wp_title(); ?>" />
+                </a>
+                <?php endif; ?>
                 <div class="menu_navigation_contact_wrapper">
                     <nav class="menu_navigation">
-                        <div class="menu_nav_item"><span class="menu_nav_text">インプラント</span></div>
-                        <div class="menu_nav_item"><span class="menu_nav_text">患者様の声</span></div>
-                        <div class="menu_nav_item"><span class="menu_nav_text">クリニック案内</span></div>
-                        <div class="menu_nav_item"><span class="menu_nav_text">コラム</span></div>
-                        <div class="menu_nav_item"><span class="menu_nav_text">お問い合わせ</span></div>
+                        <div class="menu_nav_item"><a href="" class="menu_nav_text">インプラント</a></div>
+                        <div class="menu_nav_item"><a href="" class="menu_nav_text">患者様の声</a></div>
+                        <div class="menu_nav_item"><a href="" class="menu_nav_text">クリニック案内</a></div>
+                        <div class="menu_nav_item"><a href="" class="menu_nav_text">コラム</a></div>
+                        <div class="menu_nav_item"><a href="" class="menu_nav_text">お問い合わせ</a></div>
                     </nav>
                     <div class="menu_contact_info_desktop_wrapper">
                         <div class="menu_contact_info">
                             <div class="menu_contact_phone_block">
                                 <div class="menu_contact_phone_icons_number">
                                     <img src="<?php bloginfo('template_url');?>/img/ico-tel.svg" alt="phone">
-                                    <div class="menu_contact_phone_number_text_wrapper"><span
-                                            class="menu_contact_phone_number_text">011-598-1181</span></div>
+                                    <a href="tel:011-598-1181" class="menu_contact_phone_number_text_wrapper"><span
+                                            class="menu_contact_phone_number_text">011-598-1181</span></a>
                                 </div>
                             </div>
                             <div class="menu_contact_hours_block">
@@ -148,64 +156,6 @@
                 </div>
             </div>
             </div>
-            <!-- <div class=" header-top">
-                        <div class="siteTitle">
-                            <?php if (is_home()) : ?>
-                            <h1>
-                                <a href="<?php echo home_url() ?>">
-                                    <img src="<?php bloginfo('template_url');?>/img/logo.svg"
-                                        alt="<?php wp_title(); ?>">
-                                </a>
-                            </h1>
-                            <?php else : ?>
-                            <div>
-                                <a href="<?php echo home_url() ?>">
-                                    <img src="<?php bloginfo('template_url');?>/img/logo.svg"
-                                        alt="<?php wp_title(); ?>">
-                                </a>
-                            </div>
-                            <?php endif; ?>
-                        </div>
-
-                        <nav class="menuNavi">
-                            <span class="menuNavi__link menuNavi__link-current icon-menu" id="menuNavi__menu">
-                            </span>
-                        </nav>
-            </div>
-
-            <nav class="mainNavi">
-                <ul>
-                    <li>
-                        <a href="<?php bloginfo('url'); ?>">HOME</a>
-                    </li>
-                    <li>
-                        <a href="<?php bloginfo('url'); ?>/category/topics/">記事一覧</a>
-                    </li>
-                    <li>
-                        <a href="<?php bloginfo('url'); ?>/works/">施工事例</a>
-                    </li>
-                    <li>
-                        <a href="<?php bloginfo('url'); ?>/events/">イベント</a>
-                    </li>
-                    <li>
-                        <p>ページA</p>
-                        <ul>
-                            <li>
-                                <a href="<?php bloginfo('url'); ?>/company/">会社概要</a>
-                            </li>
-                            <li>
-                                <a href="<?php bloginfo('url'); ?>/faq/">よくある質問</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="<?php bloginfo('url'); ?>/privacy-policy/">プライバシーポリシー</a>
-                    </li>
-                    <li>
-                        <a href="<?php bloginfo('url'); ?>/contact/">お問い合わせ</a>
-                    </li>
-                </ul>
-            </nav> -->
         </header>
         <!--/l-header-->
 
