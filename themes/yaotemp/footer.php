@@ -2,7 +2,7 @@
 // フッターメニューの項目を配列で定義 (WordPressのメニュー機能を使う場合は適宜変更)
 $footer_nav_items_col1 = [
     ['label' => 'トップページ', 'url' => home_url('/')],
-    ['label' => '札幌ノブデンタルインプラントクリニックについて', 'url' => home_url('/about/')],
+    ['label' => '札幌ノブデンタルインプラントクリニックについて', 'url' => home_url('/clinic/')],
     [
         'label' => 'サービス',
         'url' => home_url('/service/'),

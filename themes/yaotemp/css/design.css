@@ -2523,6 +2523,695 @@ header .header-openNav__container .openNav-cta a img {
   }
 }
 
+.clinic .clinic_message {
+  margin-top: 100px;
+  padding: 50px 0;
+  background-color: #F6F7FA;
+}
+@media (max-width: 768px) {
+  .clinic .clinic_message {
+    margin-top: 64px;
+    padding: 40px 0;
+  }
+}
+.clinic .clinic_message__inner {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+@media (max-width: 768px) {
+  .clinic .clinic_message__inner {
+    flex-direction: column-reverse;
+    max-width: 480px;
+    margin-inline: auto;
+    gap: 56px;
+  }
+}
+.clinic .clinic_message .c-parts__sec__ttl {
+  align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .clinic .clinic_message .c-parts__sec__ttl {
+    align-items: center;
+  }
+}
+.clinic .clinic_message__left {
+  width: 45%;
+}
+@media screen and (max-width: 768px) {
+  .clinic .clinic_message__left {
+    width: 100%;
+  }
+}
+.clinic .clinic_message__left .clinic_message__text {
+  margin-top: 80px;
+}
+@media (max-width: 1080px) {
+  .clinic .clinic_message__left .clinic_message__text {
+    margin-top: 56px;
+  }
+}
+@media (max-width: 768px) {
+  .clinic .clinic_message__left .clinic_message__text {
+    margin-top: 0px;
+  }
+}
+.clinic .clinic_message__left .clinic_message__text h3 {
+  color: #01255A;
+  font-size: clamp(2rem, 2.1vw, 3rem);
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .clinic .clinic_message__left .clinic_message__text h3 {
+    font-size: 1.8rem;
+  }
+}
+.clinic .clinic_message__left .clinic_message__text p {
+  margin-top: 24px;
+}
+.clinic .clinic_message__left .clinic_message__text h4 {
+  margin-top: 36px;
+  font-weight: bold;
+  text-align: right;
+}
+@media (max-width: 1080px) {
+  .clinic .clinic_message__left .clinic_message__text h4 {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .clinic .clinic_message__left .clinic_message__text h4 {
+    margin-top: 36px;
+  }
+}
+.clinic .clinic_message__right {
+  flex: 1;
+  position: relative;
+}
+.clinic .clinic_message__right .deco-img {
+  position: absolute;
+  width: 18vw;
+  max-width: 272px;
+  min-width: 151px;
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+@media (max-width: 1080px) {
+  .clinic .clinic_message__right .deco-img {
+    transform: translate(-25%, 50%);
+  }
+}
+@media (max-width: 768px) {
+  .clinic .clinic_message__right .deco-img {
+    transform: translate(0%, 30%);
+    right: 0;
+    left: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  .clinic .clinic_message__right .c-parts__circle > img {
+    margin-top: 40px;
+  }
+}
+.clinic .clinic_history {
+  margin-top: 50px;
+  padding: 50px 0 0px;
+}
+@media (max-width: 768px) {
+  .clinic .clinic_history {
+    padding: 0;
+  }
+}
+.clinic .clinic_history .concept-2col__content {
+  max-width: 1000px;
+}
+.clinic .clinic_history__table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 110%;
+  line-height: 1.4em;
+  margin-bottom: 80px;
+}
+@media (max-width: 480px) {
+  .clinic .clinic_history__table {
+    flex-direction: column;
+  }
+}
+.clinic .clinic_history__table dl {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: calc(48% - 0.5rem);
+}
+.clinic .clinic_history__table dl dt {
+  color: #01255A;
+  font-size: 1.8rem;
+  font-weight: 500;
+  display: flex;
+  width: 30%;
+  padding: 30px 25px;
+  border-bottom: 0.1rem solid #01255A;
+  align-items: center;
+}
+.clinic .clinic_history__table dl dd {
+  width: 70%;
+  padding: 30px 25px;
+  border-bottom: 0.1rem solid #E4E3E3;
+}
+@media (max-width: 768px) {
+  .clinic .clinic_history dl {
+    width: 100%;
+  }
+  .clinic .clinic_history dl dt {
+    padding: 20px 15px;
+  }
+  .clinic .clinic_history dl dd {
+    padding: 20px 15px;
+  }
+}
+.clinic .clinic_about__button .c-btn {
+  padding: 0 40px;
+}
+.clinic .clinic_about__button .c-btn svg {
+  display: block;
+}
+@media (max-width: 768px) {
+  .clinic .clinic_about__button {
+    margin-inline: auto;
+  }
+}
+
+.c-parts__sec__ttl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  z-index: 1;
+  margin-inline: auto;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .c-parts__sec__ttl {
+    gap: 16px;
+  }
+}
+.c-parts__sec__ttl__bg {
+  margin: 0;
+  opacity: 0.2;
+}
+.c-parts__sec__ttl__bg span {
+  color: #01255A;
+  font-size: clamp(2.8rem, 4.16vw, 6rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.c-parts__sec__ttl__text {
+  color: #01255A;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: 0;
+}
+@media (max-width: 768px) {
+  .c-parts__sec__ttl__text {
+    font-size: 1.2rem;
+  }
+}
+
+.c-concept__2col {
+  padding-top: 7.8vw;
+  padding-bottom: 12px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1280px) {
+  .c-concept__2col {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-concept__2col {
+    padding-top: 40px;
+  }
+}
+.c-concept__2col__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5vw;
+  gap: 55px;
+  max-width: 1200px;
+  margin-inline: auto;
+  align-items: flex-end;
+}
+@media screen and (min-width: 1280px) {
+  .c-concept__2col__content {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .c-concept__2col__content {
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-concept__2col__content {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+}
+.c-concept__2col__content .c-concept__2col__item {
+  width: calc(50% - 32px);
+  overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .c-concept__2col__content .c-concept__2col__item {
+    width: 100%;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}
+.c-concept__2col__content .c-concept__2col__item .c-concept__2col__item__img {
+  overflow: hidden;
+}
+.c-concept__2col__content .c-concept__2col__item .c-concept__2col__item__img img {
+  width: 100%;
+  transition: all 0.4s;
+}
+.c-concept__2col__content .c-concept__2col__item__info {
+  margin-top: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .c-concept__2col__content .c-concept__2col__item__info {
+    flex: 1;
+  }
+}
+.c-concept__2col__content .c-concept__2col__item__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.c-concept__2col__content .c-concept__2col__item__label span:nth-child(1) {
+  color: #fff;
+  background-color: #9C8F79;
+  padding: 2px 16px;
+  display: inline-block;
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 480px) {
+  .c-concept__2col__content .c-concept__2col__item__label span:nth-child(1) {
+    padding: 2px 7px;
+    font-size: 1rem;
+  }
+}
+.c-concept__2col__content .c-concept__2col__item__label span:nth-child(2) {
+  font-size: 1.2rem;
+  color: #DBB777;
+}
+.c-concept__2col__content .c-concept__2col__item h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: clamp(1.9rem, 1.8vw, 2.6rem);
+  font-weight: 500;
+  padding: 4px 12px;
+  color: #01255A;
+}
+.c-concept__2col__content .c-concept__2col__item h3 span {
+  font-size: clamp(2.4rem, 2.22vw, 3.2rem);
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 4px;
+  font-family: "Roboto", sans-serif;
+  color: #01255A;
+}
+@media screen and (max-width: 480px) {
+  .c-concept__2col__content .c-concept__2col__item h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
+.c-concept__2col__content .c-concept__2col__item p {
+  margin-top: 10px;
+  text-align: left;
+}
+@media screen and (max-width: 480px) {
+  .c-concept__2col__content .c-concept__2col__item p {
+    font-size: 1.3rem;
+  }
+}
+.c-concept__2col .c-cta {
+  margin-top: 40px;
+  margin-inline: auto;
+}
+
+.c-parts__about {
+  margin-bottom: -120px;
+}
+@media screen and (max-width: 1080px) {
+  .c-parts__about {
+    margin-bottom: -200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-parts__about {
+    margin-top: -100px;
+    margin-bottom: 0;
+  }
+}
+.c-parts__about__content {
+  margin-top: 40px;
+}
+.c-parts__about__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 480px) {
+  .c-parts__about__item {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+}
+.c-parts__about__item img {
+  width: 100%;
+  border-radius: 30px;
+}
+.c-parts__about__item__text {
+  width: 65%;
+}
+@media screen and (max-width: 768px) {
+  .c-parts__about__item__text {
+    width: 100%;
+  }
+}
+.c-parts__about__item__text div {
+  width: 80%;
+  border: 1px solid #e4e3e3;
+  background-color: #fff;
+  padding: 24px;
+  transform: translate(95%, -90%);
+}
+@media screen and (max-width: 768px) {
+  .c-parts__about__item__text div {
+    width: 95%;
+    transform: translate(2.5%, -10%);
+  }
+}
+.c-parts__about__item__text div h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #01255A;
+  line-height: 1.5;
+}
+.c-parts__about__item__text div p {
+  margin-top: 12px;
+  line-height: 1.8;
+}
+
+.c-parts__map {
+  margin-top: 100px;
+}
+.c-parts__map__content {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+.c-parts__map__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media screen and (max-width: 880px) {
+  .c-parts__map__info {
+    flex: 1 1 55%;
+    flex-direction: column;
+  }
+}
+.c-parts__map__info_header {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 48%;
+}
+@media screen and (max-width: 880px) {
+  .c-parts__map__info_header {
+    width: 100%;
+  }
+}
+.c-parts__map__info_header .c_parts__sec__ttl {
+  align-items: flex-start;
+  margin-inline: unset;
+}
+.c-parts__map__info_clinic_details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.c-parts__map__info_clinic_name {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #01255A;
+  margin: 0;
+}
+.c-parts__map__info_tel {
+  font-size: 3.1rem;
+  font-weight: 500;
+  color: #01255A;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0;
+}
+.c-parts__map__info_tel_icon {
+  display: inline-block;
+  line-height: 0;
+}
+.c-parts__map__info_tel_icon img {
+  fill: #01255A;
+  width: 3rem;
+  height: 3rem;
+}
+.c-parts__map__info_hours {
+  width: 48%;
+}
+@media screen and (max-width: 768px) {
+  .c-parts__map__info_hours {
+    width: 100%;
+  }
+}
+.c-parts__map__info_hours_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.4rem;
+  text-align: center;
+  border-bottom: 0.1rem solid #E4E3E3;
+}
+.c-parts__map__info_hours_table th,
+.c-parts__map__info_hours_table td {
+  border-top: 0.1rem solid #E4E3E3;
+  padding: 1rem 0.5rem;
+  vertical-align: middle;
+}
+.c-parts__map__info_hours_table th:nth-child(1),
+.c-parts__map__info_hours_table td:nth-child(1) {
+  color: #01255A;
+}
+.c-parts__map__info_hours_th {
+  font-weight: normal;
+}
+.c-parts__map__info_hours_th_label {
+  width: auto;
+  min-width: 9rem;
+  text-align: left;
+  padding-left: 1rem;
+}
+.c-parts__map__info_hours_td_time {
+  font-weight: 500;
+  white-space: nowrap;
+}
+.c-parts__map__info_hours_symbol {
+  font-size: 1.6rem;
+}
+.c-parts__map__info_hours_symbol.is_unavailable {
+  color: #757575;
+}
+.c-parts__map__info_hours_note {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+@media screen and (max-width: 1080px) {
+  .c-parts__map {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-parts__map {
+    margin-top: 0;
+  }
+  .c-parts__map__content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .c-parts__map__info {
+    flex-basis: auto;
+  }
+  .c-parts__map__info_hours_table {
+    font-size: 1.3rem;
+  }
+  .c-parts__map__info_hours_table th,
+  .c-parts__map__info_hours_table td {
+    padding: 0.8rem 0.3rem;
+  }
+  .c-parts__map__info_hours_symbol {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-parts__map__info {
+    gap: 1.6rem;
+  }
+  .c-parts__map__info_clinic_name {
+    font-size: 1.1rem;
+  }
+  .c-parts__map__info_hours_th_label {
+    min-width: 7rem;
+    font-size: 1.2rem;
+  }
+  .c-parts__map__info_hours_table {
+    font-size: 1.2rem;
+  }
+  .c-parts__map__info_hours_table th,
+  .c-parts__map__info_hours_table td {
+    padding: 0.6rem 0.2rem;
+  }
+  .c-parts__map__info_hours_td_time {
+    font-size: 1.2rem;
+  }
+}
+
+.c-parts__access {
+  margin-top: 100px;
+}
+.c-parts__access__content {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+}
+.c-parts__access__info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media screen and (max-width: 880px) {
+  .c-parts__access__info {
+    flex: 1 1 55%;
+    flex-direction: column;
+  }
+}
+.c-parts__access__info_header {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  width: 48%;
+}
+@media screen and (max-width: 880px) {
+  .c-parts__access__info_header {
+    width: 100%;
+  }
+}
+.c-parts__access__info_header .c_parts__sec__ttl {
+  align-items: flex-start;
+  margin-inline: unset;
+}
+.c-parts__access__info_clinic_details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.c-parts__access__info_address {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin: 0;
+  color: #01255A;
+}
+.c-parts__access__info_clinic_guide {
+  margin-top: 10px;
+}
+.c-parts__access__info_clinic_guide dl {
+  margin-bottom: 20px;
+}
+.c-parts__access__info_clinic_guide__left_line {
+  margin-bottom: 1rem;
+  padding: 0.4em 0.5em;
+  color: #01255A;
+  border-left: solid 5px #01255A;
+  font-weight: 500;
+}
+.c-parts__access__visuals {
+  flex: 1 1 55%;
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 880px) {
+  .c-parts__access__visuals {
+    width: 100%;
+  }
+}
+.c-parts__access__visuals iframe {
+  width: 100%;
+  min-height: 320px;
+}
+@media screen and (max-width: 768px) {
+  .c-parts__access {
+    margin-top: 60px;
+  }
+  .c-parts__access__content {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .c-parts__access__info {
+    flex-basis: auto;
+  }
+  .c-parts__access__info_address {
+    font-size: 1.3rem;
+  }
+  .c-parts__access__visuals {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-parts__access__info {
+    gap: 1.6rem;
+  }
+  .c-parts__access__info_address {
+    font-size: 1.1rem;
+  }
+  .c-parts__access__visuals {
+    width: 100vw;
+    margin: 20px calc(50% - 50vw);
+  }
+}
+
+.c-parts__circle img {
+  border-radius: 30px;
+}
+
 .sample .sample-feature {
   margin-top: 80px;
 }
