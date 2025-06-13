@@ -2530,6 +2530,20 @@ header .header-openNav__container .openNav-cta a img {
   }
 }
 
+.clinic .pagehead-set {
+  background-position: center center;
+  background-image: url("../img/clinic-mv-bg.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+  margin-top: 50px;
+  color: #01255A;
+}
+@media (max-width: 768px) {
+  .clinic .pagehead-set {
+    margin-top: -60px;
+  }
+}
 .clinic .clinic_message {
   margin-top: 100px;
   padding: 50px 0;
@@ -2887,7 +2901,7 @@ header .header-openNav__container .openNav-cta a img {
 }
 @media screen and (max-width: 768px) {
   .c-parts__about {
-    margin-top: -100px;
+    margin-top: -50px;
     margin-bottom: 0;
   }
 }
@@ -2944,44 +2958,45 @@ header .header-openNav__container .openNav-cta a img {
 .c-parts__map {
   margin-top: 100px;
 }
+.c-parts__map .c-parts__sec__ttl {
+  position: relative;
+  align-items: flex-start;
+  margin-inline: unset;
+  margin-bottom: 40px;
+}
+.c-parts__map .c-parts__sec__ttl::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  transform: translate(0%, -50%);
+  height: 1px;
+  width: 80px;
+  background-color: #01255A;
+}
 .c-parts__map__content {
   max-width: 1200px;
   margin-inline: auto;
-  display: flex;
-  gap: 3rem;
-  flex-direction: column;
 }
 .c-parts__map__info {
   display: flex;
   justify-content: space-between;
   gap: 2.5rem;
-  align-items: center;
+  align-items: flex-start;
 }
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
   .c-parts__map__info {
-    flex: 1 1 55%;
     flex-direction: column;
   }
 }
-.c-parts__map__info_header {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  width: 48%;
+.c-parts__map__info_details {
+  flex: 1;
+  overflow: hidden;
 }
-@media screen and (max-width: 880px) {
-  .c-parts__map__info_header {
+@media screen and (max-width: 768px) {
+  .c-parts__map__info_details {
     width: 100%;
   }
-}
-.c-parts__map__info_header .c_parts__sec__ttl {
-  align-items: flex-start;
-  margin-inline: unset;
-}
-.c-parts__map__info_clinic_details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
 }
 .c-parts__map__info_clinic_name {
   font-size: 1.7rem;
@@ -3005,8 +3020,8 @@ header .header-openNav__container .openNav-cta a img {
 }
 .c-parts__map__info_tel_icon img {
   fill: #01255A;
-  width: 3rem;
-  height: 3rem;
+  width: 2.3rem;
+  height: 2.3rem;
 }
 .c-parts__map__info_hours {
   width: 48%;
@@ -3066,10 +3081,6 @@ header .header-openNav__container .openNav-cta a img {
   .c-parts__map {
     margin-top: 0;
   }
-  .c-parts__map__content {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
   .c-parts__map__info {
     flex-basis: auto;
   }
@@ -3110,49 +3121,41 @@ header .header-openNav__container .openNav-cta a img {
 .c-parts__access {
   margin-top: 100px;
 }
+.c-parts__access .c-parts__sec__ttl {
+  position: relative;
+  align-items: flex-start;
+  margin-inline: unset;
+  margin-bottom: 40px;
+}
+.c-parts__access .c-parts__sec__ttl::before {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  transform: translate(0%, -50%);
+  height: 1px;
+  width: 80px;
+  background-color: #01255A;
+}
 .c-parts__access__content {
   max-width: 1200px;
   margin-inline: auto;
-  display: flex;
-  gap: 3rem;
-  flex-direction: column;
 }
 .c-parts__access__info {
   display: flex;
   justify-content: space-between;
   gap: 2.5rem;
-  align-items: center;
+  align-items: flex-start;
 }
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
   .c-parts__access__info {
-    flex: 1 1 55%;
     flex-direction: column;
   }
 }
-.c-parts__access__info_header {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  width: 48%;
-}
-@media screen and (max-width: 880px) {
-  .c-parts__access__info_header {
-    width: 100%;
-  }
-}
-.c-parts__access__info_header .c_parts__sec__ttl {
-  align-items: flex-start;
-  margin-inline: unset;
-}
-.c-parts__access__info_clinic_details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
 .c-parts__access__info_address {
+  margin: 0;
   font-size: 1.7rem;
   line-height: 1.8;
-  margin: 0;
   color: #01255A;
 }
 .c-parts__access__info_clinic_guide {
@@ -3170,8 +3173,6 @@ header .header-openNav__container .openNav-cta a img {
 }
 .c-parts__access__visuals {
   flex: 1 1 55%;
-  display: flex;
-  gap: 1.5rem;
   overflow: hidden;
 }
 @media screen and (max-width: 880px) {
@@ -3186,10 +3187,6 @@ header .header-openNav__container .openNav-cta a img {
 @media screen and (max-width: 768px) {
   .c-parts__access {
     margin-top: 60px;
-  }
-  .c-parts__access__content {
-    flex-direction: column;
-    gap: 2.5rem;
   }
   .c-parts__access__info {
     flex-basis: auto;
