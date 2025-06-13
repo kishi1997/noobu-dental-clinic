@@ -649,7 +649,13 @@ header .header-openNav__container .openNav-cta a img {
 }
 .top .mv-bg {
   position: relative;
-  min-height: 60vh;
+  height: 90vh;
+  overflow: hidden;
+}
+@media screen and (max-width: 568px) {
+  .top .mv-bg {
+    height: 75vh;
+  }
 }
 .top .mv-bg picture {
   display: flex;
@@ -796,16 +802,17 @@ header .header-openNav__container .openNav-cta a img {
   }
 }
 .top .mv .line_cta_banner {
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  bottom: 10vh;
   right: 30px;
   z-index: 80;
+  transform: translateY(50%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 568px) {
   .top .mv .line_cta_banner {
-    bottom: 18px;
+    bottom: 25vh;
+    transform: translateY(50%);
     right: 15px;
-    transform: none;
   }
 }
 .top .mv .line_cta_background_circle {
