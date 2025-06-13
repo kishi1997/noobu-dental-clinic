@@ -2956,7 +2956,9 @@ header .header-openNav__container .openNav-cta a img {
 }
 
 .c-parts__map {
-  margin-top: 100px;
+  margin-top: 80px;
+  background: #F6F7FA;
+  padding: 40px 0;
 }
 .c-parts__map .c-parts__sec__ttl {
   position: relative;
@@ -2982,7 +2984,7 @@ header .header-openNav__container .openNav-cta a img {
   display: flex;
   justify-content: space-between;
   gap: 2.5rem;
-  align-items: flex-start;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   .c-parts__map__info {
@@ -2999,10 +3001,15 @@ header .header-openNav__container .openNav-cta a img {
   }
 }
 .c-parts__map__info_clinic_name {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 400;
   color: #01255A;
   margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .c-parts__map__info_clinic_name {
+    font-size: 1.2rem;
+  }
 }
 .c-parts__map__info_tel {
   font-size: 3.1rem;

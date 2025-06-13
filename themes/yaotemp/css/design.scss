@@ -3048,7 +3048,7 @@ header {
                 }
             }
 
-            .c-parts__circle > img {
+            .c-parts__circle>img {
                 @include max-screen($breakpoint-sm) {
                     margin-top: 40px;
                 }
@@ -3061,7 +3061,7 @@ header {
         padding: 50px 0 0px;
 
         @media (max-width: $breakpoint-sm) {
-            padding:0;
+            padding: 0;
         }
 
         .concept-2col__content {
@@ -3087,6 +3087,7 @@ header {
                 max-width: 800px;
                 width: calc(48% - 0.5rem);
             }
+
             dl dt {
                 color: #01255A;
                 font-size: 1.8rem;
@@ -3097,6 +3098,7 @@ header {
                 border-bottom: 0.1rem solid #01255A;
                 align-items: center;
             }
+
             dl dd {
                 width: 70%;
                 padding: 30px 25px;
@@ -3124,9 +3126,11 @@ header {
         .c-btn {
             padding: 0 40px;
         }
+
         .c-btn svg {
             display: block;
         }
+
         @media (max-width: $breakpoint-sm) {
             margin-inline: auto;
         }
@@ -3370,7 +3374,9 @@ header {
 }
 
 .c-parts__map {
-    margin-top: 100px;
+    margin-top: 80px;
+    background: $background-color-light-gray;
+    padding: 40px 0;
 
     .c-parts__sec__ttl {
         position: relative;
@@ -3399,7 +3405,7 @@ header {
         display: flex;
         justify-content: space-between;
         gap: 2.5rem;
-        align-items: flex-start;
+        align-items: center;
 
         @include max-screen($breakpoint-sm) {
             flex-direction: column;
@@ -3409,17 +3415,21 @@ header {
     &__info_details {
         flex: 1;
         overflow: hidden;
-    
+
         @include max-screen($breakpoint-sm) {
             width: 100%;
         }
     }
 
     &__info_clinic_name {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         font-weight: 400;
         color: $primary-color;
         margin: 0;
+
+        @include max-screen($breakpoint-sm) {
+            font-size: 1.2rem;
+        }
     }
 
     &__info_tel {
