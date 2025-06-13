@@ -74,7 +74,7 @@
                                                     <li><a href="<?php echo home_url() ?>">トップページ</a>
                                                     </li>
                                                     <li><a
-                                                            href="<?php bloginfo('url'); ?>/beginner/">ノブデンタルクリニックについて</a>
+                                                            href="<?php bloginfo('url'); ?>/clinic/">ノブデンタルクリニックについて</a>
                                                     </li>
                                                     <li>
                                                         <div>サービス</div>
