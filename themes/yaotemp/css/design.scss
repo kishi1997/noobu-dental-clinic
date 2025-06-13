@@ -2926,6 +2926,20 @@ header {
 
 .clinic {
 
+    .pagehead-set {
+        background-position: center center;
+        background-image: url("../img/clinic-mv-bg.jpg");
+        background-color: rgba(255, 255, 255, 0.5);
+        background-blend-mode: lighten;
+        background-size: cover;
+        margin-top: 50px;
+        color: #01255A;
+
+        @media (max-width: #{$breakpoint-sm}) {
+            margin-top: -60px;
+        }
+    }
+
     .clinic_message {
         margin-top: 100px;
         padding: 50px 0;
@@ -3297,7 +3311,7 @@ header {
     }
 
     @include max-screen($breakpoint-sm) {
-        margin-top: -100px;
+        margin-top: -50px;
         margin-bottom: 0;
     }
 
@@ -3358,46 +3372,47 @@ header {
 .c-parts__map {
     margin-top: 100px;
 
+    .c-parts__sec__ttl {
+        position: relative;
+        align-items: flex-start;
+        margin-inline: unset;
+        margin-bottom: 40px;
+    }
+
+    .c-parts__sec__ttl::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        transform: translate(0%, -50%);
+        height: 1px;
+        width: 80px;
+        background-color: #01255A;
+    }
+
     &__content {
         max-width: 1200px;
         margin-inline: auto;
-        display: flex;
-        gap: 3rem;
-        flex-direction: column;
     }
 
     &__info {
         display: flex;
         justify-content: space-between;
         gap: 2.5rem;
-        align-items: center;
+        align-items: flex-start;
 
-        @media screen and (max-width: 880px) {
-            flex: 1 1 55%;
+        @include max-screen($breakpoint-sm) {
             flex-direction: column;
         }
     }
 
-    &__info_header {
-        display: flex;
-        gap: 2rem;
-        flex-direction: column;
-        width: 48%;
-
-        @media screen and (max-width: 880px) {
+    &__info_details {
+        flex: 1;
+        overflow: hidden;
+    
+        @include max-screen($breakpoint-sm) {
             width: 100%;
         }
-
-        .c_parts__sec__ttl {
-            align-items: flex-start;
-            margin-inline: unset;
-        }
-    }
-
-    &__info_clinic_details {
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
     }
 
     &__info_clinic_name {
@@ -3424,8 +3439,8 @@ header {
 
         img {
             fill: $primary-color;
-            width: 3rem;
-            height: 3rem;
+            width: 2.3rem;
+            height: 2.3rem;
         }
     }
 
@@ -3495,11 +3510,6 @@ header {
     @include max-screen($breakpoint-sm) {
         margin-top: 0;
 
-        &__content {
-            flex-direction: column;
-            gap: 2.5rem;
-        }
-
         &__info {
             flex-basis: auto;
         }
@@ -3548,55 +3558,48 @@ header {
 }
 
 .c-parts__access {
+
     margin-top: 100px;
+
+    .c-parts__sec__ttl {
+        position: relative;
+        align-items: flex-start;
+        margin-inline: unset;
+        margin-bottom: 40px;
+    }
+
+    .c-parts__sec__ttl::before {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        transform: translate(0%, -50%);
+        height: 1px;
+        width: 80px;
+        background-color: #01255A;
+    }
 
     &__content {
         max-width: 1200px;
         margin-inline: auto;
-        display: flex;
-        gap: 3rem;
-        flex-direction: column;
     }
 
     &__info {
         display: flex;
         justify-content: space-between;
         gap: 2.5rem;
-        align-items: center;
+        align-items: flex-start;
 
-        @media screen and (max-width: 880px) {
-            flex: 1 1 55%;
+        @include max-screen($breakpoint-sm) {
             flex-direction: column;
         }
     }
 
-    &__info_header {
-        display: flex;
-        gap: 2rem;
-        flex-direction: column;
-        width: 48%;
-
-        @media screen and (max-width: 880px) {
-            width: 100%;
-        }
-
-        .c_parts__sec__ttl {
-            align-items: flex-start;
-            margin-inline: unset;
-        }
-    }
-
-    &__info_clinic_details {
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
     &__info_address {
+        margin: 0;
         font-size: 1.7rem;
         line-height: 1.8;
-        margin: 0;
-        color: $primary-color;
+        color: #01255A;
     }
 
     &__info_clinic_guide {
@@ -3617,8 +3620,6 @@ header {
 
     &__visuals {
         flex: 1 1 55%;
-        display: flex;
-        gap: 1.5rem;
         overflow: hidden;
 
         @media screen and (max-width: 880px) {
@@ -3633,11 +3634,6 @@ header {
 
     @include max-screen($breakpoint-sm) {
         margin-top: 60px;
-
-        &__content {
-            flex-direction: column;
-            gap: 2.5rem;
-        }
 
         &__info {
             flex-basis: auto;
