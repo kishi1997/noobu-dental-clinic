@@ -2847,6 +2847,32 @@ header .header-openNav__container .openNav-cta a img {
   background: unset;
 }
 
+.reason {
+  margin-bottom: 120px;
+}
+@media (max-width: 768px) {
+  .reason {
+    margin-bottom: 80px;
+  }
+}
+.reason .pagehead-set {
+  background-position: center center;
+  background-image: url("../img/reason-mv-bg.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+  margin-top: 50px;
+  color: #01255A;
+}
+@media (max-width: 768px) {
+  .reason .pagehead-set {
+    margin-top: -60px;
+  }
+}
+.reason .c-point__2col {
+  background: unset;
+}
+
 .c-feature__2col {
   text-align: center;
   position: relative;
