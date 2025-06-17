@@ -31,7 +31,7 @@
                 <?php endif; ?>
                 <div class="menu_navigation_contact_wrapper">
                     <nav class="menu_navigation">
-                        <div class="menu_nav_item"><a href="" class="menu_nav_text">インプラント</a></div>
+                        <div class="menu_nav_item"><a href="<?php bloginfo('url'); ?>/service/implant/" class="menu_nav_text">インプラント</a></div>
                         <div class="menu_nav_item"><a href="" class="menu_nav_text">患者様の声</a></div>
                         <div class="menu_nav_item"><a href="" class="menu_nav_text">クリニック案内</a></div>
                         <div class="menu_nav_item"><a href="" class="menu_nav_text">コラム</a></div>
@@ -79,29 +79,29 @@
                                                     <li>
                                                         <div>サービス</div>
                                                         <ul class="header-childMenu">
-                                                            <li><a href="<?php bloginfo('url'); ?>/news/">- インプラント</a>
+                                                            <li><a href="<?php bloginfo('url'); ?>/service/implant/">- インプラント</a>
                                                             </li>
-                                                            <li><a href="<?php bloginfo('url'); ?>/column/">- 審美歯科</a>
+                                                            <li><a href="<?php bloginfo('url'); ?>/service/dentistry/">- 審美歯科</a>
                                                             </li>
-                                                            <li><a href="<?php bloginfo('url'); ?>/column/">-
+                                                            <li><a href="<?php bloginfo('url'); ?>/service/ceramic/">-
                                                                     セラミック治療</a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li><a href="<?php bloginfo('url'); ?>/reason/">選ばれる理由</a></li>
-                                                    <li><a href="<?php bloginfo('url'); ?>/company/">あなたにピッタリの治療法は？</a>
+                                                    <li><a href="<?php bloginfo('url'); ?>/foryou/">あなたにピッタリの治療法は？</a>
                                                     </li>
-                                                    <li><a href="<?php bloginfo('url'); ?>/company">よくある質問</a>
+                                                    <li><a href="<?php bloginfo('url'); ?>/faq">よくある質問</a>
                                                     </li>
-                                                    <li><a href="<?php bloginfo('url'); ?>/contact/">治療の流れ</a>
+                                                    <li><a href="<?php bloginfo('url'); ?>/flow/">治療の流れ</a>
                                                     </li>
                                                 </ul>
                                                 <ul>
-                                                    <li><a href="">治療費用</a>
+                                                    <li><a href="<?php bloginfo('url'); ?>/price/">治療費用</a>
                                                     </li>
-                                                    <li><a href="">採用情報</a>
+                                                    <li><a href="<?php bloginfo('url'); ?>/recruit/">採用情報</a>
                                                     </li>
-                                                    <li><a href="">院概要・診療時間・アクセス</a></li>
+                                                    <li><a href="<?php bloginfo('url'); ?>/about/">院概要・診療時間・アクセス</a></li>
                                                     <li>
                                                         <div>ブログ</div>
                                                         <ul class="header-childMenu">

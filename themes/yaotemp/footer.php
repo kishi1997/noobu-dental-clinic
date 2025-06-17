@@ -8,12 +8,12 @@ $footer_nav_items_col1 = [
         'url' => home_url('/service/'),
         'children' => [
             ['label' => 'インプラント', 'url' => home_url('/service/implant/')],
-            ['label' => '審美歯科', 'url' => home_url('/service/aesthetic/')],
+            ['label' => '審美歯科', 'url' => home_url('/service/dentistry/')],
             ['label' => 'セラミック治療', 'url' => home_url('/service/ceramic/')],
         ]
     ],
     ['label' => '選ばれる理由', 'url' => home_url('/reason/')],
-    ['label' => 'あなたにピッタリの治療法は？', 'url' => home_url('/treatment-select/')],
+    ['label' => 'あなたにピッタリの治療法は？', 'url' => home_url('/foryou/')],
     ['label' => 'よくある質問', 'url' => home_url('/faq/')],
     ['label' => '治療の流れ', 'url' => home_url('/flow/')],
 ];
@@ -21,7 +21,7 @@ $footer_nav_items_col1 = [
 $footer_nav_items_col2 = [
     ['label' => '治療費用', 'url' => home_url('/price/')],
     ['label' => '採用情報', 'url' => home_url('/recruit/')],
-    ['label' => '院概要・診療時間・アクセス', 'url' => home_url('/clinic/')],
+    ['label' => '院概要・診療時間・アクセス', 'url' => home_url('/about/')],
     [
         'label' => 'ブログ',
         'url' => home_url('/blog/'),
