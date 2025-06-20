@@ -41,7 +41,7 @@
                             <tbody>
                                 <tr class="c-parts__map__info_hours_row">
                                     <td class="c-parts__map__info_hours_td c-parts__map__info_hours_td_time">
-                                    9:00~12:30</td>
+                                    9:00〜12:30</td>
                                     <td class="c-parts__map__info_hours_td">
                                         <span class="c-parts__map__info_hours_symbol">○</span>
                                     </td>
@@ -66,7 +66,7 @@
                                 </tr>
                                 <tr class="c-parts__map__info_hours_row">
                                     <td class="c-parts__map__info_hours_td c-parts__map__info_hours_td_time">
-                                        14:00~18:30</td>
+                                        14:00〜18:30</td>
                                     <td class="c-parts__map__info_hours_td">
                                         <span class="c-parts__map__info_hours_symbol">○</span>
                                     </td>

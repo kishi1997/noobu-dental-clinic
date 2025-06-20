@@ -3300,6 +3300,80 @@ header .header-openNav__container .openNav-cta a img {
   background-color: #01255A;
 }
 
+.about {
+  padding-top: 55px;
+}
+@media (max-width: 768px) {
+  .about {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .about {
+    margin-top: -50px;
+    padding-top: 0;
+  }
+}
+.about .pagehead-set {
+  background-image: url("../img/about-mv-bg.jpg");
+}
+@media (max-width: 768px) {
+  .about .about_overview {
+    margin-bottom: 40px;
+  }
+}
+.about .about_overview__content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about .about_overview__item {
+  font-size: 1.5rem;
+  line-height: 1.4em;
+  margin-bottom: 60px;
+}
+.about .about_overview__item dl {
+  display: flex;
+}
+.about .about_overview__item dl dt {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  padding: 30px 25px;
+  color: #01255A;
+  font-weight: 400;
+  border-bottom: 1px solid #01255A;
+}
+.about .about_overview__item dl dd {
+  width: 70%;
+  padding: 30px 25px;
+  font-weight: 500;
+  border-bottom: 1px solid #E4E3E3;
+}
+.about .about_overview__access_map {
+  margin-bottom: 30px;
+}
+.about .about_overview__access_info dl {
+  margin-bottom: 10px;
+}
+.about .about_overview__access_info dl dt, .about .about_overview__access_info dl dd {
+  padding: 10px;
+  line-height: 1.7;
+}
+.about .about_overview__access_info dl dt {
+  font-weight: 500;
+  color: #01255A;
+  background-color: #F6F7FA;
+}
+.about .about_overview__access_info dl a {
+  font-weight: 500;
+  color: #01255A;
+  border-bottom: 1px solid #01255A;
+}
+.about .about_overview__access_info dl a:hover {
+  opacity: 0.7;
+}
+
 .c-feature__2col {
   text-align: center;
   position: relative;
