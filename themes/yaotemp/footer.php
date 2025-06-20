@@ -92,8 +92,7 @@ $footer_nav_items_col2 = [
                     <p class="l-footer__info_address">〒062-0934 札幌市豊平区平岸4条8丁目B</p>
                     <p class="l-footer__info_tel">
                         <span class="l-footer__info_tel_icon">
-                            <img src="<?php echo get_theme_file_uri('/img/ico-tel.svg'); ?>" alt="tel-icon"
-                                class="l-footer__info_logo">
+                            <img src="<?php echo get_theme_file_uri('/img/ico-tel.svg'); ?>" alt="tel-icon">
                         </span>
                         011-598-1181
                     </p>
