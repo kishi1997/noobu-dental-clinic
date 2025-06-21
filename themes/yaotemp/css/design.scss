@@ -3748,6 +3748,93 @@ header {
     }
 }
 
+.about  {
+    padding-top: 55px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
+    }
+
+    .pagehead-set {
+        background-image: url("../img/about-mv-bg.jpg");
+    }
+
+    .about_overview {
+
+        @media (max-width: $breakpoint-sm) {
+            margin-bottom: 40px;
+        }
+        
+        &__content {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        &__item {
+            font-size: 1.5rem;
+            line-height: 1.4em;
+            margin-bottom: 60px;
+            
+            dl {
+                display: flex;
+
+                dt {
+                    display: flex;
+                    align-items: center;
+                    width: 30%;
+                    padding: 30px 25px;
+                    color: $primary-color;
+                    font-weight: 400;
+                    border-bottom: 1px solid $primary-color;
+                }
+
+                dd {
+                    width: 70%;
+                    padding: 30px 25px;
+                    font-weight: 500;
+                    border-bottom: 1px solid #E4E3E3;
+                }
+            }
+        }
+
+        &__access_map {
+            margin-bottom: 30px;
+        }
+
+        &__access_info {
+            dl {
+                margin-bottom: 10px;
+                
+                dt, dd {
+                    padding: 10px;
+                    line-height: 1.7;
+                }
+
+                dt {
+                    font-weight: 500;
+                    color: $primary-color;
+                    background-color: $background-color-light-gray;
+                }
+
+                a {
+                    font-weight: 500;
+                    color: $primary-color;
+                    border-bottom: 1px solid $primary-color;
+                }
+                a:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
 .c-feature__2col {
     text-align: center;
     position: relative;
