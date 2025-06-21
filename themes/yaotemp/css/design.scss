@@ -2924,20 +2924,45 @@ header {
     }
 }
 
+.pagehead-set {
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+    background-size: cover;
+    color: $primary-color;
+
+    @media (max-width: $breakpoint-xs) {
+        padding: 30px 20px;
+    }
+
+    .pagehead-text {
+        font-family: $font-mincho, serif;
+
+        h1 {
+            font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+        }
+
+        p {
+            font-size: clamp(1.4rem, 1.16rem + 0.8vw, 1.8rem);
+        }
+    }
+}
+
 .clinic {
 
-    .pagehead-set {
-        background-position: center center;
-        background-image: url("../img/clinic-mv-bg.jpg");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: lighten;
-        background-size: cover;
-        margin-top: 50px;
-        color: #01255A;
+    padding-top: 55px;
 
-        @media (max-width: #{$breakpoint-sm}) {
-            margin-top: -60px;
-        }
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
+    }
+
+    .pagehead-set {
+        background-image: url("../img/clinic-mv-bg.jpg");
     }
 
     .clinic_message {
@@ -3064,17 +3089,11 @@ header {
             padding: 0;
         }
 
-        .concept-2col__content {
-            max-width: 1000px;
-        }
-
         &__table {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 1rem;
+            justify-items: center;
             font-size: 110%;
             line-height: 1.4em;
+            margin-top: 30px;
             margin-bottom: 80px;
 
             @media (max-width: $breakpoint-xs) {
@@ -3085,18 +3104,19 @@ header {
                 display: flex;
                 flex-wrap: wrap;
                 max-width: 800px;
-                width: calc(48% - 0.5rem);
+                width: 100%;
             }
 
             dl dt {
-                color: #01255A;
-                font-size: 1.8rem;
-                font-weight: 500;
                 display: flex;
                 width: 30%;
                 padding: 30px 25px;
-                border-bottom: 0.1rem solid #01255A;
                 align-items: center;
+                justify-content: center;
+                font-size: 1.8rem;
+                font-weight: 500;
+                border-bottom: 0.1rem solid $primary-color;
+                color: $primary-color;
             }
 
             dl dd {
@@ -3139,18 +3159,19 @@ header {
 
 .implant {
 
-    .pagehead-set {
-        background-position: center center;
-        background-image: url("../img/implant-mv-bg.jpg");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: lighten;
-        background-size: cover;
-        margin-top: 50px;
-        color: #01255A;
+    padding-top: 55px;
 
-        @media (max-width: #{$breakpoint-sm}) {
-            margin-top: -60px;
-        }
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
+    }
+
+    .pagehead-set {
+        background-image: url("../img/implant-mv-bg.jpg");
     }
 
     .c-concept__2col {
@@ -3216,26 +3237,20 @@ header {
 }
 
 .dentistry {
-    margin-top: 80px;
-    margin-bottom: 120px;
+    
+    padding-top: 55px;
 
-    @media (max-width: #{$breakpoint-sm}) {
-        margin-top: 60px;
-        margin-bottom: 80px;
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
     }
 
     .pagehead-set {
-        background-position: center center;
         background-image: url("../img/dentistry-mv-bg.jpg");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: lighten;
-        background-size: cover;
-        margin-top: 50px;
-        color: #01255A;
-
-        @media (max-width: #{$breakpoint-sm}) {
-            margin-top: -60px;
-        }
     }
 
     .c-point__2col {
@@ -3244,26 +3259,20 @@ header {
 }
 
 .ceramic {
-    margin-top: 80px;
-    margin-bottom: 120px;
 
-    @media (max-width: #{$breakpoint-sm}) {
-        margin-top: 60px;
-        margin-bottom: 80px;
+    padding-top: 55px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
     }
 
     .pagehead-set {
-        background-position: center center;
         background-image: url("../img/ceramic-mv-bg.jpg");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: lighten;
-        background-size: cover;
-        margin-top: 50px;
-        color: #01255A;
-
-        @media (max-width: #{$breakpoint-sm}) {
-            margin-top: -60px;
-        }
     }
 
     .c-point__2col {
@@ -3272,23 +3281,25 @@ header {
 }
 
 .reason {
-    margin-bottom: 120px;
 
-    @media (max-width: #{$breakpoint-sm}) {
-        margin-bottom: 80px;
+    padding-top: 55px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
     }
 
     .pagehead-set {
-        background-position: center center;
         background-image: url("../img/reason-mv-bg.jpg");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: lighten;
-        background-size: cover;
-        margin-top: 50px;
-        color: #01255A;
+    }
 
-        @media (max-width: #{$breakpoint-sm}) {
-            margin-top: -60px;
+    @media (max-width: $breakpoint-sm) {
+        .c-feature__2col {
+            padding-top: 20px;
         }
     }
 
@@ -3299,22 +3310,19 @@ header {
 
 .foryou {
     
-    @media (min-width: $breakpoint-lg) {
-        margin-top: 80px;
+    padding-top: 55px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
     }
 
     .pagehead-set {
-        background-position: center center;
         background-image: url("../img/foryou-mv-bg.jpg");
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: lighten;
-        background-size: cover;
-        margin-top: 50px;
-        color: $primary-color;
-
-        @media (max-width: $breakpoint-sm) {
-            margin-top: -60px;
-        }
     }
 
     &_treatment {
@@ -3472,10 +3480,169 @@ header {
     }
 }
 
+.flow {
+
+    .l-main {
+        padding: 0;
+    }
+
+    padding-top: 55px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
+    }
+
+    .pagehead-set {
+        background-image: url("../img/flow-mv-bg.jpg");
+    }
+
+    .flow_step {
+
+        background: linear-gradient(to bottom, #F6F7FA, white);
+
+        @media (max-width: $breakpoint-sm) {
+            margin-bottom: 80px;
+        }
+
+        &__content {
+            margin: 0;
+            padding: 60px 0;
+        }
+
+        &__item {
+            position: relative;
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            margin-inline: auto;
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid #e4e3e3;
+            background: #fff;
+
+            @media (max-width: $breakpoint-sm) {
+                flex-direction: column;
+                gap: 10px;
+                max-width: 480px;
+            }
+            
+            &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                bottom: -28px;
+                right: 0;
+                left: 0;
+                margin: auto;
+                border-width: 28px 34px 0 34px;
+                border-style: solid;
+                border-color: #e4e3e3  transparent transparent transparent;
+                width: 0;
+                height: 0;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+
+            &:last-child {
+                &::before {
+                    content: none;
+                }
+            }
+
+            &_image {
+                width: 100%;
+                max-width: 340px;
+                margin-inline: auto;
+
+                @media (max-width: $breakpoint-sm) {
+                    max-width: 400px;
+                }
+
+                img {
+                    border-radius: 8px;
+                }
+            }
+
+            &_title {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                column-gap: 16px;
+                align-items: baseline;
+                font-size: 2.2rem;
+                font-weight: bold;
+                color: $primary-color;
+                margin-bottom: 30px;
+
+                @media (max-width: $breakpoint-sm) {
+                    font-size: 1.7rem;
+                    column-gap: 10px;
+                    margin-bottom: 20px;
+                }
+
+                &_number {
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1;
+                    box-sizing: border-box;
+                    background-clip: padding-box;
+                    background-color: $primary-color;;
+                    border: 2px solid $primary-color;;
+                    color: #fff;
+
+                    @media (max-width: $breakpoint-sm) {
+                        font-size: 1.7rem;
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                
+                .flow_step__item_title {
+                  color: $text-color-gray;
+                }
+
+                .flow_step__item_title_number {
+                    background-color: #fff;
+                    border: 2px solid $primary-color;
+                    color: $primary-color;
+                }
+            }
+
+            &_description {
+                font-size: 1.5rem;
+                line-height: 1.7;
+                margin: 0;
+            }
+        }
+    }
+}
+
 .c-feature__2col {
     text-align: center;
     position: relative;
-    padding: 40px 0;
+    margin-bottom: 80px;
+    padding-top: 80px;    
+
+    @include max-screen($breakpoint-sm) {
+        padding-top: 60px;
+        margin-bottom: 60px;
+    }
 
     .bg-deco-img {
         position: absolute;
@@ -3492,11 +3659,7 @@ header {
     }
 
     &__content {
-        margin-top: 6.1vw;
-
-        @include min-screen($breakpoint-lg) {
-            margin-top: 80px;
-        }
+        margin-top: 60px;
 
         @include max-screen($breakpoint-sm) {
             &:not(:first-child) {
@@ -3514,7 +3677,7 @@ header {
         margin-bottom: 80px;
         position: relative;
 
-        @include min-screen($breakpoint-lg) {
+        @include min-screen($breakpoint-md) {
 
             &:nth-child(even) {
                 flex-direction: row-reverse;
@@ -3541,6 +3704,10 @@ header {
             gap: 24px;
         }
 
+        .c-parts__circle img {
+            border: 1px solid rgb(1 37 90 / 5%);
+        }
+
         .deco-number {
             position: absolute;
             top: 0;
@@ -3551,11 +3718,11 @@ header {
             transform: translateY(-15%);
 
             @include max-screen($breakpoint-sm) {
-                width: 169px;
+                width: 120px;
                 right: 0;
                 left: unset;
                 bottom: 0;
-                transform: none;
+                transform: unset;
             }
 
             img {
@@ -3590,6 +3757,11 @@ header {
                 position: relative;
                 display: inline-block;
                 font-weight: 500;
+                
+                @media (max-width: $breakpoint-sm) {
+                    font-size: 2.0rem;
+                    margin-bottom: 0;
+                }
             }
 
             p {
@@ -3609,6 +3781,10 @@ header {
     text-align: center;
     background: #F6F7FA;
     padding: 80px 0;
+
+    @media (max-width: $breakpoint-sm) {
+        padding: 60px 0;
+    }
 
     &__content {
         margin-top: 40px;
@@ -3694,30 +3870,25 @@ header {
 }
 
 .c-concept__2col {
-    padding-top: 7.8vw;
-    overflow: hidden;
+    padding-top: 100px;
 
     @include min-screen($breakpoint-lg) {
         padding-top: 80px;
     }
 
     @include max-screen($breakpoint-xs) {
-        padding-top: 40px;
+        padding-top: 64px;
     }
 
     &__content {
         display: flex;
         justify-content: center;
+        align-items: flex-start;
         flex-wrap: wrap;
-        margin-top: 5vw;
+        margin-top: 40px;
+        margin-inline: auto;
         gap: 55px;
         max-width: 1200px;
-        margin-inline: auto;
-        align-items: flex-start;
-
-        @include min-screen($breakpoint-lg) {
-            margin-top: 80px;
-        }
 
         @include max-screen($breakpoint-md) {
             gap: 32px;
@@ -3738,56 +3909,14 @@ header {
                 margin-inline: auto;
             }
 
-            .c-concept__2col__item__img {
-                overflow: hidden;
-
-                img {
-                    width: 100%;
-                    transition: all .4s;
-                }
-            }
-
-            &__info {
-                margin-top: 20px;
-                text-align: left;
-
-                @include max-screen($breakpoint-xs) {
-                    flex: 1;
-                }
-            }
-
-            &__label {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-
-                span:nth-child(1) {
-                    color: #fff;
-                    background-color: #9C8F79;
-                    padding: 2px 16px;
-                    display: inline-block;
-                    font-size: 1.3rem;
-
-                    @include max-screen($breakpoint-xs) {
-                        padding: 2px 7px;
-                        font-size: 1rem;
-                    }
-                }
-
-                span:nth-child(2) {
-                    font-size: 1.2rem;
-                    color: #DBB777;
-                }
-            }
-
             h3 {
                 display: flex;
                 align-items: center;
-                margin-bottom: 14px;
+                height: 80px;
+                padding: 4px 12px;
                 font-size: clamp(1.9rem, 1.8vw, 2.6rem);
                 font-weight: 500;
-                padding: 4px 12px;
-                color: #01255A;
+                color: $primary-color;
 
                 span {
                     font-size: clamp(2.4rem, 2.22vw, 3.2rem);
@@ -3801,6 +3930,7 @@ header {
                 @include max-screen($breakpoint-xs) {
                     font-size: 1.6rem;
                     font-weight: bold;
+                    height: auto;
                 }
             }
 
@@ -3863,66 +3993,60 @@ header {
 }
 
 .c-parts__about {
-
-    margin-bottom: -120px;
-
-    @include max-screen($breakpoint-md) {
-        margin-bottom: -200px;
-    }
+    margin-top: 20px;
+    padding-bottom: 20px;
 
     @include max-screen($breakpoint-sm) {
-        margin-top: -50px;
-        margin-bottom: 0;
-    }
-
-    &__content {
-        margin-top: 40px;
+        margin-top: 24px;
+        padding-bottom: 0;
     }
 
     &__item {
+        position: relative;
         display: flex;
-        align-items: center;
-        gap: 20px;
+        flex-direction: column;
 
-        @include max-screen($breakpoint-xs) {
-            flex-direction: column-reverse;
-            align-items: start;
+        @include max-screen($breakpoint-sm) {
+            align-items: center;
         }
 
         img {
-            width: 100%;
-            border-radius: 30px;
-        }
-
-        &__text {
             width: 65%;
+            border-radius: 30px;
 
             @include max-screen($breakpoint-sm) {
                 width: 100%;
             }
+        }
 
-            div {
-                width: 80%;
-                border: 1px solid #e4e3e3;
-                background-color: #fff;
-                padding: 24px;
-                transform: translate(95%, -90%);
+        &__text {
+            position: absolute;
+            bottom: -5%;
+            right: 0%;
+            width: 52%;
+            padding: 24px;
+            border: 1px solid #e4e3e3;
+            background-color: #fff;
+            
+            @include max-screen($breakpoint-sm) {
+                position: unset;
+                width: 95%;
+                margin-top: -10%;
+            }
 
-                @include max-screen($breakpoint-sm) {
-                    width: 95%;
-                    transform: translate(2.5%, -10%);
-                }
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 1.5;
+                color: $primary-color;
+            }
 
-                h3 {
-                    font-size: 2rem;
-                    font-weight: 500;
-                    color: #01255A;
-                    line-height: 1.5;
-                }
+            p {
+                margin-top: 12px;
+                line-height: 1.8;
 
-                p {
-                    margin-top: 12px;
-                    line-height: 1.8;
+                @media (max-width: $breakpoint-sm) {
+                    line-height: 1.7;
                 }
             }
         }
@@ -3966,6 +4090,7 @@ header {
 
             @include max-screen($breakpoint-sm) {
                 order: 2;
+                text-align: center;
             }
 
             .c-parts__circle {
@@ -4271,29 +4396,29 @@ header {
         @include max-screen($breakpoint-sm) {
             flex-direction: column;
         }
-    }
 
-    &__info_address {
-        margin: 0;
-        font-size: 1.7rem;
-        line-height: 1.8;
-        color: #01255A;
-    }
-
-    &__info_clinic_guide {
-        margin-top: 10px;
-
-        dl {
-            margin-bottom: 20px;
+        &_clinic_address {
+            margin: 0;
+            font-size: 1.7rem;
+            line-height: 1.8;
+            color: $primary-color;
         }
 
-        &__left_line {
-            margin-bottom: 1rem;
-            padding: 0.4em 0.5em;
-            color: #01255A;
-            border-left: solid 5px #01255A;
-            font-weight: 500;
+        &_clinic_guide {
+            margin-top: 10px;
+    
+            dl {
+                margin-bottom: 20px;
+            }
         }
+    }
+
+    &__left_line {
+        margin-bottom: 1rem;
+        padding: 0.4em 0.5em;
+        color: $primary-color;
+        border-left: solid 5px $primary-color;
+        font-weight: 500;
     }
 
     &__visuals {
@@ -4338,7 +4463,7 @@ header {
 
         &__visuals {
             width: 100vw;
-            margin: 20px calc(50% - 50vw);
+            margin: 20px calc(50% - 50vw) 0;
         }
     }
 }
