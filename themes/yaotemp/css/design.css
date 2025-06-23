@@ -2547,10 +2547,10 @@ header .header-openNav__container .openNav-cta a img {
   font-family: "Shippori Mincho", serif, serif;
 }
 .pagehead-set .pagehead-text h1 {
-  font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+  font-size: clamp(2rem, 2.4vw, 3rem);
 }
 .pagehead-set .pagehead-text p {
-  font-size: clamp(1.4rem, 1.16rem + 0.8vw, 1.8rem);
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
 }
 
 .clinic {
@@ -3488,6 +3488,85 @@ header .header-openNav__container .openNav-cta a img {
 }
 .faq .faq_list__item dd p {
   font-weight: 400;
+}
+
+.price {
+  padding-top: 55px;
+}
+@media (max-width: 768px) {
+  .price {
+    padding-top: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .price {
+    margin-top: -50px;
+    padding-top: 0;
+  }
+}
+.price .pagehead-set {
+  background-image: url("../img/price-mv-bg.jpg");
+}
+.price .l-main {
+  padding: 0;
+}
+.price .price_list {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.price .price_list .c-parts__sec__ttl > p {
+  line-height: 1.7;
+}
+.price .price_list__item {
+  margin-top: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e4e3e3;
+}
+.price .price_list__item_title {
+  padding: 15px 0;
+  color: #01255A;
+  text-align: center;
+  border-bottom: 1px solid #e4e3e3;
+}
+.price .price_list__item_text {
+  padding: 15px 15px;
+  line-height: 1.7;
+}
+.price .price_list__item table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.price .price_list__item table th, .price .price_list__item table td {
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .price .price_list__item table th, .price .price_list__item table td {
+    font-size: 1.4rem;
+  }
+}
+.price .price_list__item table th {
+  width: 58%;
+  text-align: left;
+  border-right: 1px solid #e4e3e3;
+  border-bottom: 1px solid #e4e3e3;
+  color: #01255A;
+  background-color: #F6F7FA;
+}
+.price .price_list__item table th p {
+  font-weight: 400;
+}
+.price .price_list__item table td {
+  background-color: #fff;
+  text-align: right;
+  width: 42%;
+  border-bottom: 1px solid #e4e3e3;
 }
 
 .c-feature__2col {

@@ -2939,11 +2939,11 @@ header {
         font-family: $font-mincho, serif;
 
         h1 {
-            font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+            font-size: clamp(2rem, 2.4vw, 3rem);
         }
 
         p {
-            font-size: clamp(1.4rem, 1.16rem + 0.8vw, 1.8rem);
+            font-size: clamp(1.4rem, 1.8vw, 1.8rem);
         }
     }
 }
@@ -3953,6 +3953,94 @@ header {
 
                 p {
                     font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.price  {
+    padding-top: 55px;
+
+    @media (max-width: $breakpoint-sm) {
+        padding-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        margin-top: -50px;
+        padding-top: 0;
+    }
+
+    .pagehead-set {
+        background-image: url("../img/price-mv-bg.jpg");
+    }
+
+    .l-main {
+        padding: 0;
+    }
+
+    .price_list {
+        margin-top: 60px;
+        margin-bottom: 80px;
+
+        .c-parts__sec__ttl > p {
+            line-height: 1.7;
+        }
+
+        &__item {
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e4e3e3;
+
+            &_title {
+                padding: 15px 0;
+                color: $primary-color;
+                text-align: center;
+                border-bottom: 1px solid #e4e3e3;
+            }
+
+            &_text {
+                padding: 15px 15px;
+                line-height: 1.7;
+            }
+    
+            table {
+                width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                border-spacing: 0;
+    
+                th, td {
+                    padding: 15px;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 1.8;
+                    vertical-align: middle;
+
+                    @media (max-width: $breakpoint-sm) {
+                        font-size: 1.4rem;
+                    }
+                }
+    
+                th {
+                    width: 58%;
+                    text-align: left;
+                    border-right: 1px solid #e4e3e3;
+                    border-bottom: 1px solid #e4e3e3;
+                    color: $primary-color;
+                    background-color: $background-color-light-gray;
+
+                    p {
+                        font-weight: 400;
+                    }
+                }
+    
+                td {
+                    background-color: #fff;
+                    text-align: right;
+                    width: 42%;
+                    border-bottom: 1px solid #e4e3e3;
                 }
             }
         }
